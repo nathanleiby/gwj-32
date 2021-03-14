@@ -1,5 +1,6 @@
 extends Node2D
 
+
 # `pre_start()` is called when a scene is totally loaded.
 # Use this function to receive params from the scene which
 # called `Game.change_scene(params)` and to init your
@@ -11,14 +12,16 @@ func pre_start(params):
 	for key in params:
 		var val = params[key]
 		printt("", key, val)
-
+	
+	# show first dialog
+	curDialog = 0
+	$DialogBox/Dialog.text = dialogs[curDialog]
 
 # `start()` is called when the graphic transition ends.
 func start():
 	print("\ngameplay.gd:start() called")
 	var active_scene: Node = Game.get_active_scene()
-	print("\nCurrent active scene is: ",
-		active_scene.name, " (", active_scene.filename, ")")
+	print("\nCurrent active scene is: ", active_scene.name, " (", active_scene.filename, ")")
 	$Sprite.position = Game.size / 2
 
 
@@ -26,3 +29,18 @@ func _process(_delta):
 	var elapsed = OS.get_ticks_msec() / 500.0
 	$Sprite.position.x = Game.size.x / 2 + 100 * sin(elapsed)
 
+	if Input.is_action_just_pressed("ui_accept"):
+		_next_dialog()
+
+## Dialog
+
+var dialogs = [
+	"Hello! I am the mind flayer!",
+	"Something is missing from my life...",
+	"I hunger for new emotions.",
+]
+
+var curDialog = 0
+func _next_dialog():
+	curDialog = (curDialog+1)%dialogs.size()
+	$DialogBox/Dialog.text = dialogs[curDialog]
