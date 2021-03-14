@@ -55,3 +55,76 @@ position = Vector2( 20, 20 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 3 )
 centered = false
+
+[node name="FlavorChart" type="Polygon2D" parent="."]
+position = Vector2( 736.222, -211.428 )
+polygon = PoolVector2Array( 131.796, 257.538, 227.656, 332.041, 182.822, 436.339, 81.3989, 436.447, 34.1619, 331.569 )
+
+[node name="Text1" type="RichTextLabel" parent="FlavorChart"]
+margin_left = 119.256
+margin_top = 236.893
+margin_right = 159.256
+margin_bottom = 276.893
+text = "Joy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text2" type="RichTextLabel" parent="FlavorChart"]
+margin_left = 229.218
+margin_top = 319.838
+margin_right = 292.218
+margin_bottom = 359.838
+text = "Sadness"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text3" type="RichTextLabel" parent="FlavorChart"]
+margin_left = 176.655
+margin_top = 439.218
+margin_right = 239.655
+margin_bottom = 479.218
+text = "Fear"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text4" type="RichTextLabel" parent="FlavorChart"]
+margin_left = 68.8558
+margin_top = 441.0
+margin_right = 131.856
+margin_bottom = 481.0
+text = "Anger"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text5" type="RichTextLabel" parent="FlavorChart"]
+margin_left = -15.7797
+margin_top = 317.165
+margin_right = 47.2203
+margin_bottom = 357.165
+text = "Disgust"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score1" type="Line2D" parent="FlavorChart"]
+points = PoolVector2Array( 131.853, 357.526, 131.853, 257.475 )
+
+[node name="Score2" type="Line2D" parent="FlavorChart"]
+position = Vector2( 0.471924, 0 )
+points = PoolVector2Array( 133.269, 356.582, 226.712, 331.569 )
+
+[node name="Score3" type="Line2D" parent="FlavorChart"]
+position = Vector2( 0.471924, 0 )
+points = PoolVector2Array( 133.269, 356.582, 180.934, 436.339 )
+
+[node name="Score4" type="Line2D" parent="FlavorChart"]
+position = Vector2( 0.471924, 0 )
+points = PoolVector2Array( 133.269, 356.582, 81.8275, 436.339 )
+
+[node name="Score5" type="Line2D" parent="FlavorChart"]
+position = Vector2( 0.471924, 0 )
+points = PoolVector2Array( 133.269, 356.582, 34.1619, 331.569 )
