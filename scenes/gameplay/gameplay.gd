@@ -1,15 +1,32 @@
 extends Node2D
 
-# hold the value of what tick we're on for the given combat
-var combatTickerValue = -1
-var cards = ["attack", "defend"]
+onready var cardsDB = preload("res://scenes/cards_db.gd")
 
-var deck = [0, 0, 1, 0, 1, 1]
+## Game level state
+# Player (persists across rounds)
+onready var deck = [
+	cardsDB.Defend1,
+	cardsDB.Defend1,
+	cardsDB.Defend1,
+	cardsDB.Attack1,
+	cardsDB.Attack1,
+	cardsDB.Attack1,
+]
+
+## Per-Combat state
+# PlayerBoard
 var queue = []
-var queueSize = 2
+var queueSize = 3
 var discard = []
 
+# Time tracking for given combat
+var combatTickerValue = -1  # one combat step occurs per tick
 var startTime
+
+# Hit points and status
+var opponentHp = 10
+var selfHp = 99  # total
+var selfArmor = 0  # reset to 0 each combat
 
 
 # `pre_start()` is called when a scene is totally loaded.
@@ -24,7 +41,11 @@ func pre_start(params):
 		var val = params[key]
 		printt("", key, val)
 
-	$Queue/Dialog.text = ""
+	# TODO: Do we need to hide placeholder text?
+	$GameStats.text = ""
+	$PlayerBoard/Deck.text = ""
+	$PlayerBoard/Queue.text = ""
+	$PlayerBoard/Discard.text = ""
 
 
 # `start()` is called when the graphic transition ends.
@@ -44,14 +65,6 @@ func _process(_delta):
 	if previousTickerValue != combatTickerValue:
 		print("Combat ticker=", combatTickerValue)
 		_next_tick()
-
-	# if Input.ision_just_pressed("ui_accept"):
-
-
-# TODO: Hit points of opponent
-var opponentHp = 10
-var selfHp = 99
-var selfArmor = 0
 
 
 ## Dialog
@@ -83,25 +96,27 @@ func _next_tick():
 	########################################
 
 	# Player cards
-	for qCard in queue:
-		var cur = cards[qCard]
-		if cur == "attack":
+	for cur in queue:
+		if cur == cardsDB.Attack1:
 			opponentHp -= 1
-		elif cur == "defend":
+		if cur == cardsDB.Attack2:
+			opponentHp -= 2
+		if cur == cardsDB.Defend1:
 			selfArmor += 1
+		if cur == cardsDB.Defend2:
+			selfArmor += 2
 
 	# Enemy effects
 	if combatTickerValue % 2 == 0:
-		selfHp -= 2
+		var enemyAttack = 5
+		selfArmor -= enemyAttack
+		if selfArmor < 5:
+			selfHp += selfArmor
+			selfArmor = 0
 
 	## Update game UI
 	$GameStats.text = (
-		"Deck Size = "
-		+ str(len(deck))
-		+ "\n"
-		+ "Discard Size = "
-		+ str(len(discard))
-		+ "\n"
+		""
 		+ "Self HP = "
 		+ str(selfHp)
 		+ "\n"
@@ -114,7 +129,16 @@ func _next_tick():
 
 	## Show cards in queue
 	var queueText = ""
-	for qCard in queue:
-		queueText += (cards[qCard] + "\n")
+	for i in range(0, queueSize):
+		if i > 0:
+			queueText += " | "
 
-	$Queue/Dialog.text = queueText
+		if i < len(queue):
+			var curCard = queue[i]
+			queueText += cardsDB.DATA[curCard][0]
+		else:
+			queueText += "<empty>"
+
+	$PlayerBoard/Deck.text = str(len(deck))
+	$PlayerBoard/Queue.text = queueText
+	$PlayerBoard/Discard.text = str(len(discard))

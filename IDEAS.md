@@ -5,3 +5,4 @@
   - etc
 - try writing some unit tests (e.g. for core game, similar to Letterjam tests)
   - https://github.com/bitwes/Gut
+- make F2 rename work in gdscript in vscode

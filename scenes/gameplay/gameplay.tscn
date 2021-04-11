@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/gameplay/pause-layer/pause-layer.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/sprites/mindflayer-face.jpg" type="Texture" id=3]
 [ext_resource path="res://assets/fonts/open-sans/open-sans-regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://scenes/gameplay/gameplay.gd" type="Script" id=5]
 
@@ -25,17 +24,17 @@ __meta__ = {
 [node name="PauseLayer" parent="." instance=ExtResource( 2 )]
 
 [node name="GameStats" type="RichTextLabel" parent="."]
-margin_left = 102.828
-margin_top = 205.686
-margin_right = 750.828
-margin_bottom = 360.686
+margin_left = 100.581
+margin_top = 206.435
+margin_right = 748.581
+margin_bottom = 361.435
 custom_fonts/normal_font = SubResource( 2 )
 text = "Player HP = {}"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Queue" type="Panel" parent="."]
+[node name="PlayerBoard" type="Panel" parent="."]
 margin_left = 99.8284
 margin_top = 445.686
 margin_right = 881.828
@@ -45,19 +44,31 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Dialog" type="RichTextLabel" parent="Queue"]
-margin_left = 118.586
-margin_top = 21.0
-margin_right = 748.586
-margin_bottom = 123.0
+[node name="Queue" type="RichTextLabel" parent="PlayerBoard"]
+margin_left = 158.0
+margin_top = 14.0
+margin_right = 608.0
+margin_bottom = 116.0
 custom_fonts/normal_font = SubResource( 2 )
 text = "<PLACE HOLDER TEXT>"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Face" type="Sprite" parent="Queue"]
-position = Vector2( 20, 20 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 3 )
-centered = false
+[node name="Deck" type="RichTextLabel" parent="PlayerBoard"]
+margin_left = 33.0
+margin_top = 20.0
+margin_right = 131.0
+margin_bottom = 103.0
+text = "<DECK>
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Discard" type="RichTextLabel" parent="PlayerBoard"]
+margin_left = 657.0
+margin_top = 16.0
+margin_right = 757.0
+margin_bottom = 116.0
+text = "<DISCARD>"
