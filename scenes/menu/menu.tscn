@@ -36,7 +36,7 @@ margin_top = 86.0
 margin_right = 871.0
 margin_bottom = 174.0
 custom_fonts/font = ExtResource( 1 )
-text = "Godot Game Template"
+text = "7Metal"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -107,7 +107,7 @@ margin_bottom = 72.0
 grow_horizontal = 0
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.886275, 0.87451, 0.87451, 1 )
-text = "Crystal Bit"
+text = "Nathan Leiby"
 
 [node name="Developer2" type="Label" parent="Credits"]
 visible = false
