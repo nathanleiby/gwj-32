@@ -60,9 +60,10 @@ func _process(_delta):
 		_next_tick()
 
 
-## Dialog
 func _next_tick():
-	## Update game state
+	## Change scene if we won! (1 tick after the win tick)
+	if opponentHp <= 0:
+		Game.change_scene("res://scenes/econ/econ.tscn")
 
 	########################################
 	## Update Deck, Queue, and Discard
@@ -128,7 +129,8 @@ func _next_tick():
 
 		if i < len(queue):
 			var curCard = queue[i]
-			queueText += cardsDB.DATA[curCard][0]
+			print(curCard)
+			queueText += cardsDB.DATA[curCard]["title"]
 		else:
 			queueText += "<empty>"
 

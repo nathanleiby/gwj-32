@@ -8,6 +8,9 @@ extends Node
 var maxHP: int = 99
 var currentHP: int = 81
 
+## Money
+var money: int = 5
+
 ## Deck
 onready var cardsDB = preload("res://scenes/common/cards_db.gd")
 onready var deck: Array = [
