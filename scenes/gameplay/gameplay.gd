@@ -38,6 +38,7 @@ func pre_start(params):
 	$PlayerBoard/Discard.text = ""
 
 	deck = Player.deck.duplicate()
+	shuffle_deck()
 	selfHp = Player.currentHP
 
 
@@ -60,6 +61,12 @@ func _process(_delta):
 		_next_tick()
 
 
+func shuffle_deck():
+	print("Shuffling...")
+	randomize()
+	deck.shuffle()
+
+
 func _next_tick():
 	## Change scene if we won! (1 tick after the win tick)
 	if opponentHp <= 0:
@@ -69,11 +76,9 @@ func _next_tick():
 	## Update Deck, Queue, and Discard
 	########################################
 	if deck.size() == 0:
-		print("Shuffling...")
 		deck = discard
 		discard = []
-		randomize()
-		deck.shuffle()
+		shuffle_deck()
 
 	# draw a card
 	var drawnCard = deck.pop_front()

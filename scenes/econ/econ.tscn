@@ -76,3 +76,25 @@ margin_bottom = 83.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="RefreshButton" type="Button" parent="."]
+margin_left = 873.513
+margin_top = 80.4881
+margin_right = 964.513
+margin_bottom = 100.488
+text = "Refresh"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ContinueButton" type="Button" parent="."]
+margin_left = 874.0
+margin_top = 109.0
+margin_right = 965.0
+margin_bottom = 129.0
+text = "Next Battle"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="RefreshButton" to="." method="_on_RefreshButton_pressed"]
+[connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]

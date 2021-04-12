@@ -7,6 +7,8 @@ const cardScene = preload("res://scenes/common/card.tscn")
 const X_OFFSET_SHOPCARD = 250
 const X_OFFSET_CARD = 60
 
+var forSale = []
+
 
 func _init():
 	print("econ.gd _init()")
@@ -14,19 +16,45 @@ func _init():
 
 func _ready():
 	print("econ.gd _ready()")
-	# TODO: Do an attack and a defned ca
-	var sc1 = shopCard.instance()
-	sc1.setShopCard(cardsDB.Attack2)
-	var sc2 = shopCard.instance()
-	sc2.setShopCard(cardsDB.Attack2)
-	var sc3 = shopCard.instance()
-	sc3.setShopCard(cardsDB.Defend2)
-	$Shop/ForSaleList.add_child(sc1)
-	$Shop/ForSaleList.add_child(sc2)
-	$Shop/ForSaleList.add_child(sc3)
-	sc1.set_position(Vector2(0 * X_OFFSET_SHOPCARD, 0))
-	sc2.set_position(Vector2(1 * X_OFFSET_SHOPCARD, 0))
-	sc3.set_position(Vector2(2 * X_OFFSET_SHOPCARD, 0))
+
+	# 3 random cards for sale
+	forSale.push_back(randomCard())
+	forSale.push_back(randomCard())
+	forSale.push_back(randomCard())
+
+	setupShopCards()
+	setupDeck()
+	setupGold()
+
+
+func randomCard():
+	randomize()
+	return randi() % len(cardsDB.DATA)
+
+
+func _on_RefreshButton_pressed():
+	setupDeck()
+	setupGold()
+
+
+func _on_ContinueButton_pressed():
+	Game.change_scene("res://scenes/gameplay/gameplay.tscn")
+
+
+func setupShopCards():
+	for c in $Shop/ForSaleList.get_children():
+		$Shop/ForSaleList.remove_child(c)
+
+	for i in range(len(forSale)):
+		var sc = shopCard.instance()
+		sc.set_position(Vector2(i * X_OFFSET_SHOPCARD, 0))
+		sc.setShopCard(forSale[i])
+		$Shop/ForSaleList.add_child(sc)
+
+
+func setupDeck():
+	for c in $Deck/Cards.get_children():
+		$Deck/Cards.remove_child(c)
 
 	for i in range(len(Player.deck)):
 		var card = Player.deck[i]
@@ -35,5 +63,6 @@ func _ready():
 		cs.setCard(card)
 		$Deck/Cards.add_child(cs)
 
-# func _process():
-# 	$Deck/Cards
+
+func setupGold():
+	$Deck/Cash.text = str(Player.money) + " gold"

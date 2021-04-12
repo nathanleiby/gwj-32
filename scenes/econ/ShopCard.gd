@@ -3,7 +3,8 @@ extends Panel
 const cardsDB = preload("res://scenes/common/cards_db.gd")
 
 ## Parametrize with this
-var card
+var cardName
+var cardData
 
 var isSold = false
 
@@ -13,14 +14,15 @@ func _ready():
 
 
 func setShopCard(c):
-	card = cardsDB.DATA[c]
+	cardName = c
+	cardData = cardsDB.DATA[cardName]
 
 	# update general card
-	$Card.setCard(c)
+	$Card.setCard(cardName)
 
 	# update "shop card"
-	$Title.text = card["title"]
-	$Cost.text = str(card["cost"]) + " gp"
+	$Title.text = cardData["title"]
+	$Cost.text = str(cardData["cost"]) + " gp"
 
 
 func _on_BuyButton_pressed():
@@ -36,15 +38,15 @@ func _on_BuyButton_pressed():
 
 func buy_card():
 	# can't buy it
-	if Player.money < card["cost"]:
+	if Player.money < cardData["cost"]:
 		return false
 
 	# remove card from shop
 	isSold = true
 
 	# update player
-	Player.money -= card["cost"]
-	Player.deck.push_back(card)
+	Player.money -= cardData["cost"]
+	Player.deck.push_back(cardName)
 
 	# update ShopCard UI
 	$Title.text = "sold"
