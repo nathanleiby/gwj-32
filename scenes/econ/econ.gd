@@ -14,11 +14,11 @@ func _ready():
 	print("econ.gd _ready()")
 	# TODO: Do an attack and a defned ca
 	var sc1 = shopCard.instance()
-	sc1.setCard(cardsDB.Attack2)
+	sc1.setShopCard(cardsDB.Attack2)
 	var sc2 = shopCard.instance()
-	sc2.setCard(cardsDB.Attack2)
+	sc2.setShopCard(cardsDB.Attack2)
 	var sc3 = shopCard.instance()
-	sc3.setCard(cardsDB.Defend2)
+	sc3.setShopCard(cardsDB.Defend2)
 	$Shop/ForSaleList.add_child(sc1)
 	$Shop/ForSaleList.add_child(sc2)
 	$Shop/ForSaleList.add_child(sc3)
@@ -26,3 +26,6 @@ func _ready():
 	sc1.set_position(Vector2(0, 0))
 	sc2.set_position(Vector2(X_OFFSET, 0))
 	sc3.set_position(Vector2(2 * X_OFFSET, 0))
+
+# func _process():
+# 	$Deck/Cards

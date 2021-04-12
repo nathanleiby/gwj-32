@@ -72,32 +72,32 @@ __meta__ = {
 
 [node name="Cards" type="Node" parent="Deck"]
 
-[node name="Card1" type="Sprite" parent="Deck"]
-position = Vector2( 137.844, 41 )
+[node name="Card1" type="Sprite" parent="Deck/Cards"]
+position = Vector2( 177.593, 514 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )
 
-[node name="Card2" type="Sprite" parent="Deck"]
-position = Vector2( 202.749, 40 )
+[node name="Card2" type="Sprite" parent="Deck/Cards"]
+position = Vector2( 242.498, 513 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )
 
-[node name="Card3" type="Sprite" parent="Deck"]
-position = Vector2( 269.695, 40 )
+[node name="Card3" type="Sprite" parent="Deck/Cards"]
+position = Vector2( 309.444, 513 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )
 
-[node name="Card4" type="Sprite" parent="Deck"]
-position = Vector2( 335.621, 40 )
+[node name="Card4" type="Sprite" parent="Deck/Cards"]
+position = Vector2( 375.37, 513 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 4 )
 
-[node name="Card5" type="Sprite" parent="Deck"]
-position = Vector2( 404.543, 40 )
+[node name="Card5" type="Sprite" parent="Deck/Cards"]
+position = Vector2( 444.292, 513 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 4 )
 
-[node name="Card6" type="Sprite" parent="Deck"]
-position = Vector2( 473.465, 40 )
+[node name="Card6" type="Sprite" parent="Deck/Cards"]
+position = Vector2( 513.214, 513 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 4 )

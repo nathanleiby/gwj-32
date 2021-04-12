@@ -2,21 +2,26 @@ extends Panel
 
 const cardsDB = preload("res://scenes/common/cards_db.gd")
 
-var card = cardsDB.DATA[cardsDB.Attack1]
+## Parametrize with this
+var card
 
 var isSold = false
 
 
-func setCard(cardName):
-	card = cardsDB.DATA[cardName]
-
-
 func _ready():
-	print("Shop card rdy")
+	pass
+
+
+func setShopCard(c):
+	card = cardsDB.DATA[c]
+
+	# update general card
+	$Card.setCard(c)
+
+	# update "shop card"
 	$Title.text = card["title"]
 	$Cost.text = str(card["cost"]) + " gp"
-	$Icon.modulate = cardsDB.getColor(card["rarity"])
-	$Icon.texture = card["texture"]
+
 
 func _on_BuyButton_pressed():
 	print("buy button pressed")

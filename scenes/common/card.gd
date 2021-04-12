@@ -1,12 +1,24 @@
-extends Node2D
+extends Control
 
-# Load the Db
-onready var CardsDB = preload("res://scenes/common/cards_db.gd")
+const cardsDB = preload("res://scenes/common/cards_db.gd")
 
-# load the current card
-var curCard = CardsDB.Attack1
-onready var CardInfo = CardsDB.DATA[curCard]
+## Parameter
+var cardName = cardsDB.Defend1  # can be overwritten before _ready() is called
+
+## Onload
+onready var current = cardsDB.DATA[cardName]
 
 
 func _ready():
-	print(CardsDB.Attack1)
+	pass
+
+
+func setCard(c):
+	current = cardsDB.DATA[c]
+	print("card.setCard = ", current["title"])
+	$Icon.modulate = cardsDB.getColor(current["rarity"])
+	$Icon.texture = current["texture"]
+
+
+func setShopCard(sc):
+	print(sc)

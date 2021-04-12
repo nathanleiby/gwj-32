@@ -1,6 +1,7 @@
 
 - [x] combat ends when 0 hp, transition to econ.
-- [ ] allowing buying card(s)
+- [..] allowing buying card(s)
+- [ ] add bought cards to play deck
 - [ ] econ=>battle transition
 
 Deploy
