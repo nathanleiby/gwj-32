@@ -1,17 +1,6 @@
 extends Node2D
 
-onready var cardsDB = preload("res://scenes/cards_db.gd")
-
-## Game level state
-# Player (persists across rounds)
-onready var deck = [
-	cardsDB.Defend1,
-	cardsDB.Defend1,
-	cardsDB.Defend1,
-	cardsDB.Attack1,
-	cardsDB.Attack1,
-	cardsDB.Attack1,
-]
+onready var cardsDB = preload("res://scenes/common/cards_db.gd")
 
 ## Per-Combat state
 # PlayerBoard
@@ -25,8 +14,9 @@ var startTime
 
 # Hit points and status
 var opponentHp = 10
-var selfHp = 99  # total
-var selfArmor = 0  # reset to 0 each combat
+var deck
+var selfHp
+var selfArmor = 0
 
 
 # `pre_start()` is called when a scene is totally loaded.
@@ -46,6 +36,9 @@ func pre_start(params):
 	$PlayerBoard/Deck.text = ""
 	$PlayerBoard/Queue.text = ""
 	$PlayerBoard/Discard.text = ""
+
+	deck = Player.deck.duplicate()
+	selfHp = Player.currentHP
 
 
 # `start()` is called when the graphic transition ends.

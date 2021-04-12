@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bowie-knife.svg-bf72115bbebc31037253cb2331875270.stex"
+path="res://.import/defend.svg-aa3465821c02ada1e7dea2bbeca53596.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bowie-knife.svg"
-dest_files=[ "res://.import/bowie-knife.svg-bf72115bbebc31037253cb2331875270.stex" ]
+source_file="res://assets/defend.svg"
+dest_files=[ "res://.import/defend.svg-aa3465821c02ada1e7dea2bbeca53596.stex" ]
 
 [params]
 

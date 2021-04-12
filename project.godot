@@ -41,6 +41,7 @@ config/icon="res://assets/sprites/icon.png"
 [autoload]
 
 Game="*res://autoload/game.gd"
+Player="*res://autoload/player.gd"
 
 [display]
 
