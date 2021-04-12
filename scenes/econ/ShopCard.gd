@@ -48,6 +48,6 @@ func buy_card():
 
 	# update ShopCard UI
 	$Title.text = "sold"
+	$Card.hide()
 	$Cost.hide()
-	$Icon.hide()
 	$BuyButton.hide()
