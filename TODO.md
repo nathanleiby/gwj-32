@@ -1,5 +1,3 @@
-- [x] allow buying a queue size upgrade
-- [ ] allow trashing cards (costs $$ to get rid of?)
 - [ ] fix bug transitioning to GameOver screen
 
 

@@ -1,26 +1,38 @@
 extends Node
 
-# Player
-#
-# Contains player state that persists across battles
+# Imports
+const cardsDB = preload("res://scenes/common/cards_db.gd")
 
-## Health
-var maxHP: int = 50
-var currentHP: int = 50
-
-## Money
-var money: int = 5
-var queueSize: int = 3
-
-## Deck
-onready var cardsDB = preload("res://scenes/common/cards_db.gd")
-onready var deck: Array = [
+##
+const startingDeck: Array = [
 	cardsDB.Defend1,
 	cardsDB.Defend1,
 	cardsDB.Attack1,
 	cardsDB.Attack1,
 	cardsDB.Attack1,
 ]
+
+# include all cardssure no crashes
+var debugDeck = cardsDB.DATA.keys()
+
+# Player
+#
+# Contains player state that persists across battles
+
+## Health
+var maxHP: int = 50
+var currentHP: int = maxHP
+
+## Money
+var money: int = 5
+
+## Deck
+var maxDeckSize: int = 10
+# onready var deck: Array = startingDeck
+onready var deck: Array = debugDeck  # testing123..
+
+## Queue
+var queueSize: int = 3
 
 ## Items
 # ..

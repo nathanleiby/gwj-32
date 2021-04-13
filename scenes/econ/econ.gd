@@ -7,8 +7,12 @@ const deckCardScene = preload("res://scenes/econ/DeckCard.tscn")
 
 const X_OFFSET_SHOPCARD = 250
 const X_OFFSET_DECKCARD = 120
+const Y_OFFSET_DECKCARD = 120
+const DECKCARDS_PER_ROW = 7
 
+# TODO: Move these to a central place, where I can tweak game design params
 const QUEUE_SIZE_COST = 10
+const DECK_SIZE_COST = 5
 
 var forSale = []
 
@@ -51,6 +55,17 @@ func _on_BuyQueueSizeButton_pressed():
 	setupPlayerHUD()
 
 
+func _on_BuyDeckSizeButton_pressed():
+	# can't buy it
+	if Player.money < DECK_SIZE_COST:
+		return false
+
+	# update player
+	Player.money -= DECK_SIZE_COST
+	Player.maxDeckSize += 1
+	setupPlayerHUD()
+
+
 func _on_ContinueButton_pressed():
 	Game.change_scene("res://scenes/gameplay/gameplay.tscn")
 
@@ -73,7 +88,11 @@ func setupDeck():
 	for i in range(len(Player.deck)):
 		var card = Player.deck[i]
 		var cs = deckCardScene.instance()
-		cs.set_position(Vector2(i * X_OFFSET_DECKCARD, -10))
+
+		var col = i % DECKCARDS_PER_ROW
+		#warning-ignore:integer_division
+		var row = i / DECKCARDS_PER_ROW
+		cs.set_position(Vector2(col * X_OFFSET_DECKCARD, -10 + row * Y_OFFSET_DECKCARD))
 		cs.setCard(card)
 		$Deck/Cards.add_child(cs)
 
@@ -81,4 +100,5 @@ func setupDeck():
 func setupPlayerHUD():
 	$HUD/Cash.text = str(Player.money) + " gold"
 	$HUD/QueueSize.text = str(Player.queueSize) + " qsize"
+	$HUD/DeckSize.text = str(Player.maxDeckSize) + " dsize"
 	$HUD/HP.text = "(" + str(Player.currentHP) + " / " + str(Player.maxHP) + ")"

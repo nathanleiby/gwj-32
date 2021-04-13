@@ -8,8 +8,8 @@ bg_color = Color( 0.113725, 0.121569, 0.196078, 1 )
 
 [node name="DeckCard" type="Panel"]
 margin_left = 195.0
-margin_top = 123.0
-margin_right = 295.0
+margin_top = 110.0
+margin_right = 308.0
 margin_bottom = 223.0
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 2 )
@@ -18,28 +18,28 @@ __meta__ = {
 }
 
 [node name="Title" type="RichTextLabel" parent="."]
-margin_left = 20.0
-margin_right = 85.0
-margin_bottom = 20.0
+margin_left = 8.0
+margin_top = 2.0
+margin_right = 105.0
+margin_bottom = 42.0
 text = "Attack 2"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TrashButton" type="Button" parent="."]
-margin_left = 10.0
-margin_top = 80.0
-margin_right = 90.0
-margin_bottom = 100.0
-rect_rotation = -0.595376
+margin_left = 9.0
+margin_top = 90.0
+margin_right = 96.0
+margin_bottom = 110.0
 text = "Trash"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Card" parent="." instance=ExtResource( 1 )]
-margin_left = 50.0
-margin_top = 50.0
-margin_right = 50.0
-margin_bottom = 50.0
+margin_left = 56.8865
+margin_top = 57.946
+margin_right = 56.8865
+margin_bottom = 57.946
 [connection signal="pressed" from="TrashButton" to="." method="_on_TrashButton_pressed"]

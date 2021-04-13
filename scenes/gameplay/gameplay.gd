@@ -112,10 +112,22 @@ func _next_tick():
 			opponentHp -= 1
 		if cur == cardsDB.Attack2:
 			opponentHp -= 2
+		if cur == cardsDB.QueueBlade:
+			var value = 0
+			for q in queue:
+				if cardsDB.DATA[q]["type"] == cardsDB.AttackType:
+					value += 1
+			opponentHp -= value
 		if cur == cardsDB.Defend1:
 			selfArmor += 1
 		if cur == cardsDB.Defend2:
 			selfArmor += 2
+		if cur == cardsDB.QueueShield:
+			var value = 0
+			for q in queue:
+				if cardsDB.DATA[q]["type"] == cardsDB.DefendType:
+					value += 1
+			selfArmor += value
 
 	# Enemy effects
 	if combatTickerValue % 2 == 0:  # enemy attacks every other turn

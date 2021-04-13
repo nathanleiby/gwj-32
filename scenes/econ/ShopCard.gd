@@ -40,6 +40,8 @@ func buy_card():
 	# can't buy it
 	if Player.money < cardData["cost"]:
 		return false
+	if Player.maxDeckSize <= len(Player.deck):
+		return false
 
 	# remove card from shop
 	isSold = true

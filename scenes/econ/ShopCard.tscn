@@ -11,7 +11,6 @@ margin_left = 195.0
 margin_top = 123.0
 margin_right = 347.0
 margin_bottom = 275.0
-rect_rotation = -0.204968
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 2 )
 __meta__ = {
@@ -30,10 +29,10 @@ __meta__ = {
 }
 
 [node name="Title" type="RichTextLabel" parent="."]
-margin_left = 11.5701
-margin_top = 9.19055
-margin_right = 76.5701
-margin_bottom = 29.1906
+margin_left = 12.0
+margin_top = 9.0
+margin_right = 139.0
+margin_bottom = 29.0
 text = "Attack 2"
 __meta__ = {
 "_edit_use_anchors_": false
