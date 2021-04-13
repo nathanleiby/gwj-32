@@ -4,11 +4,11 @@
 [ext_resource path="res://assets/fonts/open-sans/open-sans-regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://scenes/gameplay/gameplay.gd" type="Script" id=5]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 20
 font_data = ExtResource( 4 )
 
-[sub_resource type="StyleBoxFlat" id=1]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.6, 0.6, 0.6, 0.670588 )
 corner_radius_top_left = 10
 corner_radius_top_right = 10
@@ -28,7 +28,7 @@ margin_left = 101.0
 margin_top = 118.0
 margin_right = 872.0
 margin_bottom = 363.0
-custom_fonts/normal_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 1 )
 text = "Player HP = {}"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -39,7 +39,7 @@ margin_left = 99.8284
 margin_top = 445.686
 margin_right = 881.828
 margin_bottom = 582.686
-custom_styles/panel = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -49,7 +49,7 @@ margin_left = 158.0
 margin_top = 14.0
 margin_right = 608.0
 margin_bottom = 116.0
-custom_fonts/normal_font = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 1 )
 text = "<PLACE HOLDER TEXT>"
 __meta__ = {
 "_edit_use_anchors_": false

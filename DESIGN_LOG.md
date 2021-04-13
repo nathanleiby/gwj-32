@@ -1,3 +1,9 @@
+April 12 @ 11:50pm
+
+- dying consistenly on level 4.
+  - seems like monster difficulty scales up too fast.
+  - there's no way to heal.
+
 April 12 @ 6pm
 
 - with base HP of 99, was dying on level 6

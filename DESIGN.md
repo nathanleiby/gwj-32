@@ -69,3 +69,7 @@ IDEATION
   - maybe.. something like x strikes and you're out or a health meter for how badly you lost?
   - nice part of this is that you can see if your deck isn't working well and pivot.
   - this might be more fun in PvP land
+
+- each position in your queue is unlocked with one of the metals
+- each position can be "fortified" with one of the metals (for bonus interaction)
+- you choose a primary metal for each playthrough, giving you pros/cons

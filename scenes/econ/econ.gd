@@ -81,3 +81,4 @@ func setupDeck():
 func setupPlayerHUD():
 	$HUD/Cash.text = str(Player.money) + " gold"
 	$HUD/QueueSize.text = str(Player.queueSize) + " qsize"
+	$HUD/HP.text = "(" + str(Player.currentHP) + " / " + str(Player.maxHP) + ")"
