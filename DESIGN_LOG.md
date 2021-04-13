@@ -1,6 +1,7 @@
-April 13 @ 3pm
+April 13
 
 - trying to make card choices more tactical and engaging. Adding first cards to use "queue" based mechanics.
+- with the "debug deck" (1 of each card), I was able to squeak through level 4 and died immediately on level 5.
 
 April 12 @ 11:50pm
 
