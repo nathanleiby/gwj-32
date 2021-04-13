@@ -64,3 +64,8 @@ IDEATION
 > The most important goals of the alchemists were the conversion of base metals into gold or silver and the creation of the elixir of life (Panacea)
 
 - heptagram or other cool symbol instead of Godot robot in loading screens
+
+- in autochess, each battle is independent and you don't LOSE from just losing one
+  - maybe.. something like x strikes and you're out or a health meter for how badly you lost?
+  - nice part of this is that you can see if your deck isn't working well and pivot.
+  - this might be more fun in PvP land
