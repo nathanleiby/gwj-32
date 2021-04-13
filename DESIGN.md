@@ -49,3 +49,7 @@ IDEATION
 - could each queue slot have a level, and higher level cards only trigger if it's upgraded enough?
   - Or you can specialized, e.g. lock a slot, get a bonus to certain types of cards, etc
     - e.g. bronze queue slot enhances other bronze cards
+
+- Alchemy symbology
+  - https://thenounproject.com/term/alchemy/
+  - https://freesvg.org/heptagram

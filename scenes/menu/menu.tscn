@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/menu/title_font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://scenes/menu/play-button.gd" type="Script" id=2]
 [ext_resource path="res://scenes/menu/exit-button.gd" type="Script" id=3]
 [ext_resource path="res://resources/fonts/normal.tres" type="DynamicFont" id=4]
 [ext_resource path="res://resources/fonts/credits-font.tres" type="DynamicFont" id=5]
+[ext_resource path="res://assets/img/heptagramm_einzeln.svg" type="Texture" id=6]
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0
@@ -17,10 +18,15 @@ __meta__ = {
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.176471, 0.682353, 0.647059, 1 )
+color = Color( 0.109804, 0.0117647, 0.12549, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="heptagramm_einzeln" type="Sprite" parent="."]
+position = Vector2( 511.362, 298.121 )
+scale = Vector2( 0.638713, 0.638713 )
+texture = ExtResource( 6 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_right = 1.0
@@ -31,9 +37,9 @@ __meta__ = {
 }
 
 [node name="Title" type="Label" parent="CenterContainer"]
-margin_left = 152.0
+margin_left = 376.0
 margin_top = 86.0
-margin_right = 871.0
+margin_right = 647.0
 margin_bottom = 174.0
 custom_fonts/font = ExtResource( 1 )
 text = "7 Metals"
@@ -94,7 +100,7 @@ __meta__ = {
 }
 
 [node name="MadeByLabel" type="Label" parent="Credits"]
-margin_right = 131.0
+margin_right = 146.0
 margin_bottom = 34.0
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0.792157, 0.792157, 0.792157, 1 )
@@ -102,7 +108,7 @@ text = "made by:"
 
 [node name="Developer1" type="Label" parent="Credits"]
 margin_top = 38.0
-margin_right = 131.0
+margin_right = 146.0
 margin_bottom = 72.0
 grow_horizontal = 0
 custom_fonts/font = ExtResource( 5 )
