@@ -19,6 +19,5 @@ func setCard(c):
 	$Icon.modulate = cardsDB.getColor(current["rarity"])
 	$Icon.texture = current["texture"]
 
-
-func setShopCard(sc):
-	print(sc)
+# func setShopCard(sc):
+# 	print(sc)

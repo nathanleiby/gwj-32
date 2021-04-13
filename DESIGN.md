@@ -18,6 +18,7 @@ Game outline
 
 Gameplay parameters to explore
 
+- pay to heal at shop (or elsewhere)
 - starting HP
 - enemies and their stats / attack styles
 - cards you can buy (e.g. number of cards in shop)
@@ -61,3 +62,5 @@ IDEATION
 
 "7 Metals: An Alchemical Quest"
 > The most important goals of the alchemists were the conversion of base metals into gold or silver and the creation of the elixir of life (Panacea)
+
+- heptagram or other cool symbol instead of Godot robot in loading screens

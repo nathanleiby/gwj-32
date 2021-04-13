@@ -7,20 +7,20 @@
 script = ExtResource( 1 )
 
 [node name="Shop" type="Panel" parent="."]
-margin_left = 37.0
-margin_top = 72.0
-margin_right = 983.0
-margin_bottom = 443.0
+margin_left = 39.7491
+margin_top = 50.0
+margin_right = 985.749
+margin_bottom = 421.0
 rect_pivot_offset = Vector2( 280.395, 308.346 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Title" type="RichTextLabel" parent="Shop"]
-margin_left = 9.0
-margin_top = 7.0
-margin_right = 91.0
-margin_bottom = 72.0
+margin_left = 6.0
+margin_top = -38.0
+margin_right = 88.0
+margin_bottom = 27.0
 custom_fonts/normal_font = ExtResource( 3 )
 text = "Shop"
 __meta__ = {
@@ -47,50 +47,27 @@ text = "+1 Queue Size"
 margin_left = 39.7491
 margin_top = 473.0
 margin_right = 985.749
-margin_bottom = 563.0
+margin_bottom = 593.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Title" type="RichTextLabel" parent="Deck"]
-margin_left = 5.99323
-margin_top = 9.73901
-margin_right = 97.9932
-margin_bottom = 49.739
-text = "Current Deck
-"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Cash" type="RichTextLabel" parent="Deck"]
-margin_left = 744.343
-margin_top = 2.75732
-margin_right = 935.343
-margin_bottom = 45.7573
+margin_left = 6.0
+margin_top = -40.0
+margin_right = 88.0
+margin_bottom = 25.0
 custom_fonts/normal_font = ExtResource( 3 )
-custom_colors/default_color = Color( 1, 0.843137, 0, 1 )
-text = "5 gold"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="QueueSize" type="RichTextLabel" parent="Deck"]
-margin_left = 744.343
-margin_top = 45.7573
-margin_right = 935.343
-margin_bottom = 88.7573
-custom_fonts/normal_font = ExtResource( 3 )
-text = "3 qsize"
+text = "Deck"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Cards" type="Container" parent="Deck"]
-margin_left = 43.0
-margin_top = 26.0
-margin_right = 731.0
-margin_bottom = 84.0
+margin_left = 39.4324
+margin_top = 21.7846
+margin_right = 727.432
+margin_bottom = 79.7846
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -111,6 +88,29 @@ margin_top = 109.0
 margin_right = 965.0
 margin_bottom = 129.0
 text = "Next Battle"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HUD" type="Node" parent="."]
+
+[node name="QueueSize" type="RichTextLabel" parent="HUD"]
+margin_left = 900.0
+margin_right = 1091.0
+margin_bottom = 43.0
+custom_fonts/normal_font = ExtResource( 3 )
+text = "3 qsize"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cash" type="RichTextLabel" parent="HUD"]
+margin_left = 750.0
+margin_right = 941.0
+margin_bottom = 43.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 1, 0.843137, 0, 1 )
+text = "5 gold"
 __meta__ = {
 "_edit_use_anchors_": false
 }

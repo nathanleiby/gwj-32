@@ -3,9 +3,10 @@ extends Node2D
 const cardsDB = preload("res://scenes/common/cards_db.gd")
 const shopCard = preload("res://scenes/econ/ShopCard.tscn")
 const cardScene = preload("res://scenes/common/card.tscn")
+const deckCardScene = preload("res://scenes/econ/DeckCard.tscn")
 
 const X_OFFSET_SHOPCARD = 250
-const X_OFFSET_CARD = 60
+const X_OFFSET_DECKCARD = 120
 
 const QUEUE_SIZE_COST = 10
 
@@ -71,12 +72,12 @@ func setupDeck():
 
 	for i in range(len(Player.deck)):
 		var card = Player.deck[i]
-		var cs = cardScene.instance()
-		cs.set_position(Vector2(i * X_OFFSET_CARD, 30))
+		var cs = deckCardScene.instance()
+		cs.set_position(Vector2(i * X_OFFSET_DECKCARD, -10))
 		cs.setCard(card)
 		$Deck/Cards.add_child(cs)
 
 
 func setupPlayerHUD():
-	$Deck/Cash.text = str(Player.money) + " gold"
-	$Deck/QueueSize.text = str(Player.queueSize) + " qsize"
+	$HUD/Cash.text = str(Player.money) + " gold"
+	$HUD/QueueSize.text = str(Player.queueSize) + " qsize"

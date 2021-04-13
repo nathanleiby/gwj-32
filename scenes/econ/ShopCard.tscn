@@ -11,6 +11,7 @@ margin_left = 195.0
 margin_top = 123.0
 margin_right = 347.0
 margin_bottom = 275.0
+rect_rotation = -0.204968
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 2 )
 __meta__ = {
