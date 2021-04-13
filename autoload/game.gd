@@ -5,6 +5,8 @@
 # a specific scene.
 extends Node
 
+# Progress through game
+var level: int = 1
 
 var size: Vector2 setget , get_size
 
@@ -36,7 +38,7 @@ func _force_main_scene_load():
 	played_scene.owner = main
 
 
-func change_scene(new_scene, params= {}):
+func change_scene(new_scene, params = {}):
 	main.change_scene(new_scene, params)
 
 

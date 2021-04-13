@@ -14,9 +14,11 @@ var combatTickerValue = -1  # one combat step occurs per tick
 var startTime
 
 # Hit points and status
-var opponentHp = 10
+var opponentHp
+var opponentAttack
+var opponentAttackFrequency = 2
+
 var deck
-var selfHp
 var selfArmor = 0
 
 
@@ -40,7 +42,9 @@ func pre_start(params):
 
 	deck = Player.deck.duplicate()
 	shuffle_deck()
-	selfHp = Player.currentHP
+
+	opponentHp = 10 * Game.level
+	opponentAttack = 2 * Game.level
 
 
 # `start()` is called when the graphic transition ends.
@@ -71,7 +75,14 @@ func shuffle_deck():
 func _next_tick():
 	## Change scene if we won! (1 tick after the win tick)
 	if opponentHp <= 0:
+		Player.money += Game.level * 2
+		Game.level += 1
 		Game.change_scene("res://scenes/econ/econ.tscn")
+		return
+
+	if Player.currentHP <= 0:
+		Game.change_scene("res://scenes/gameover/gameover.tscn")
+		return
 
 	########################################
 	## Update Deck, Queue, and Discard
@@ -107,24 +118,31 @@ func _next_tick():
 			selfArmor += 2
 
 	# Enemy effects
-	if combatTickerValue % 2 == 0:
-		var enemyAttack = 5
-		selfArmor -= enemyAttack
-		if selfArmor < 5:
-			selfHp += selfArmor
+	if combatTickerValue % 2 == 0:  # enemy attacks every other turn
+		selfArmor -= opponentAttack
+		if selfArmor < 0:
+			Player.currentHP += selfArmor
 			selfArmor = 0
 
 	## Update game UI
 	$GameStats.text = (
 		""
+		+ "Level = "
+		+ str(Game.level)
+		+ "\n"
+		+ "\n"
 		+ "Self HP = "
-		+ str(selfHp)
+		+ str(Player.currentHP)
 		+ "\n"
 		+ "Self Armor = "
 		+ str(selfArmor)
 		+ "\n"
+		+ "\n"
 		+ "Opponent HP = "
 		+ str(opponentHp)
+		+ "\n"
+		+ "Opponent Strength = "
+		+ str(opponentAttack)
 	)
 
 	$PlayerBoard/Deck.text = str(len(deck))

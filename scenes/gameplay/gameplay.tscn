@@ -24,10 +24,10 @@ __meta__ = {
 [node name="PauseLayer" parent="." instance=ExtResource( 2 )]
 
 [node name="GameStats" type="RichTextLabel" parent="."]
-margin_left = 100.581
-margin_top = 206.435
-margin_right = 748.581
-margin_bottom = 361.435
+margin_left = 101.0
+margin_top = 118.0
+margin_right = 872.0
+margin_bottom = 363.0
 custom_fonts/normal_font = SubResource( 2 )
 text = "Player HP = {}"
 __meta__ = {

@@ -5,8 +5,8 @@ extends Node
 # Contains player state that persists across battles
 
 ## Health
-var maxHP: int = 99
-var currentHP: int = 81
+var maxHP: int = 50
+var currentHP: int = 50
 
 ## Money
 var money: int = 5
