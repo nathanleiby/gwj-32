@@ -1,5 +1,6 @@
 extends Node2D
 
+onready var cardScene = preload("res://scenes/common/card.tscn")
 onready var cardsDB = preload("res://scenes/common/cards_db.gd")
 
 ## Per-Combat state
@@ -126,6 +127,15 @@ func _next_tick():
 		+ str(opponentHp)
 	)
 
+	$PlayerBoard/Deck.text = str(len(deck))
+	$PlayerBoard/Discard.text = str(len(discard))
+	updateQueue()
+
+
+const X_OFFSET_QUEUECARD = 60
+
+
+func updateQueue():
 	## Show cards in queue
 	var queueText = ""
 	for i in range(0, queueSize):
@@ -139,6 +149,15 @@ func _next_tick():
 		else:
 			queueText += "<empty>"
 
-	$PlayerBoard/Deck.text = str(len(deck))
 	$PlayerBoard/Queue.text = queueText
-	$PlayerBoard/Discard.text = str(len(discard))
+	for c in $PlayerBoard/Queue.get_children():
+		$PlayerBoard/Queue.remove_child(c)
+
+	for i in range(queueSize):
+		if i < len(queue):
+			var card = cardScene.instance()
+			card.set_position(Vector2((i + 1) * X_OFFSET_QUEUECARD, 50))
+			card.setCard(queue[i])
+			$PlayerBoard/Queue.add_child(card)
+
+		# TODO: Display empty queue spaces
