@@ -51,5 +51,13 @@ IDEATION
     - e.g. bronze queue slot enhances other bronze cards
 
 - Alchemy symbology
-  - https://thenounproject.com/term/alchemy/
-  - https://freesvg.org/heptagram
+  - quick guide (not public domain img):
+    - http://lifepurposetattoos.blogspot.com/2014/07/tattoo-quotes-and-alchemical-symbols.html
+    - https://www.alamy.com/stock-photo-alchemical-symbols-103997270.html
+  - open images
+    - https://thenounproject.com/term/alchemy/
+    - https://freesvg.org/heptagram
+
+
+"7 Metals: An Alchemical Quest"
+> The most important goals of the alchemists were the conversion of base metals into gold or silver and the creation of the elixir of life (Panacea)
