@@ -36,6 +36,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="BuyQueueSizeButton" type="Button" parent="Shop"]
+margin_left = 311.617
+margin_top = 268.503
+margin_right = 511.617
+margin_bottom = 311.503
+text = "+1 Queue Size"
+
 [node name="Deck" type="Panel" parent="."]
 margin_left = 39.7491
 margin_top = 473.0
@@ -57,10 +64,10 @@ __meta__ = {
 }
 
 [node name="Cash" type="RichTextLabel" parent="Deck"]
-margin_left = 750.0
-margin_top = 7.0
-margin_right = 938.0
-margin_bottom = 85.0
+margin_left = 744.343
+margin_top = 2.75732
+margin_right = 935.343
+margin_bottom = 45.7573
 custom_fonts/normal_font = ExtResource( 3 )
 custom_colors/default_color = Color( 1, 0.843137, 0, 1 )
 text = "5 gold"
@@ -68,11 +75,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="QueueSize" type="RichTextLabel" parent="Deck"]
+margin_left = 744.343
+margin_top = 45.7573
+margin_right = 935.343
+margin_bottom = 88.7573
+custom_fonts/normal_font = ExtResource( 3 )
+text = "3 qsize"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Cards" type="Container" parent="Deck"]
-margin_left = 42.0
-margin_top = 25.0
-margin_right = 833.0
-margin_bottom = 83.0
+margin_left = 43.0
+margin_top = 26.0
+margin_right = 731.0
+margin_bottom = 84.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -96,5 +114,6 @@ text = "Next Battle"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="Shop/BuyQueueSizeButton" to="." method="_on_BuyQueueSizeButton_pressed"]
 [connection signal="pressed" from="RefreshButton" to="." method="_on_RefreshButton_pressed"]
 [connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]

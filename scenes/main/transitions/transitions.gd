@@ -4,7 +4,7 @@
 class_name Transition
 extends CanvasLayer
 
-signal progress_bar_filled()
+signal progress_bar_filled
 
 onready var anim := $AnimationPlayer
 onready var progress = $ColorRect/Progress
@@ -47,7 +47,7 @@ func _on_fade_out_finished(cur_anim):
 func _update_progress_bar(progress_ratio):
 	var tween = progress.tween
 	if tween.is_active():
-		tween.stop_all() # stop previous animation
+		tween.stop_all()  # stop previous animation
 	tween.interpolate_property(
 		progress.bar,
 		"value",

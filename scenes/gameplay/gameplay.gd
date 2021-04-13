@@ -6,7 +6,7 @@ onready var cardsDB = preload("res://scenes/common/cards_db.gd")
 ## Per-Combat state
 # PlayerBoard
 var queue = []
-var queueSize = 3
+var queueSize = Player.queueSize
 var discard = []
 
 # Time tracking for given combat

@@ -36,7 +36,7 @@ margin_top = 86.0
 margin_right = 871.0
 margin_bottom = 174.0
 custom_fonts/font = ExtResource( 1 )
-text = "7Metal"
+text = "7 Metals"
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -53,5 +53,4 @@ margin_left = 76.3187
 margin_top = 72.9702
 margin_right = 76.3187
 margin_bottom = 72.9702
-[connection signal="gui_input" from="." to="." method="_on_ShopCard_gui_input"]
 [connection signal="pressed" from="BuyButton" to="." method="_on_BuyButton_pressed"]

@@ -7,6 +7,8 @@ const cardScene = preload("res://scenes/common/card.tscn")
 const X_OFFSET_SHOPCARD = 250
 const X_OFFSET_CARD = 60
 
+const QUEUE_SIZE_COST = 10
+
 var forSale = []
 
 
@@ -24,7 +26,7 @@ func _ready():
 
 	setupShopCards()
 	setupDeck()
-	setupGold()
+	setupPlayerHUD()
 
 
 func randomCard():
@@ -34,7 +36,18 @@ func randomCard():
 
 func _on_RefreshButton_pressed():
 	setupDeck()
-	setupGold()
+	setupPlayerHUD()
+
+
+func _on_BuyQueueSizeButton_pressed():
+	# can't buy it
+	if Player.money < QUEUE_SIZE_COST:
+		return false
+
+	# update player
+	Player.money -= QUEUE_SIZE_COST
+	Player.queueSize += 1
+	setupPlayerHUD()
 
 
 func _on_ContinueButton_pressed():
@@ -64,5 +77,6 @@ func setupDeck():
 		$Deck/Cards.add_child(cs)
 
 
-func setupGold():
+func setupPlayerHUD():
 	$Deck/Cash.text = str(Player.money) + " gold"
+	$Deck/QueueSize.text = str(Player.queueSize) + " qsize"
