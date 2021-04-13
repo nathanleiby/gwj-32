@@ -1,3 +1,7 @@
+April 13 @ 3pm
+
+- trying to make card choices more tactical and engaging. Adding first cards to use "queue" based mechanics.
+
 April 12 @ 11:50pm
 
 - dying consistenly on level 4.

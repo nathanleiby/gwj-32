@@ -80,6 +80,9 @@ func setupShopCards():
 		sc.setShopCard(forSale[i])
 		$Shop/ForSaleList.add_child(sc)
 
+	$Shop/BuyDeckSizeButton.text = "+1 Deck Size (" + str(DECK_SIZE_COST) + " gp)"
+	$Shop/BuyQueueSizeButton.text = "+1 Queue Size (" + str(QUEUE_SIZE_COST) + " gp)"
+
 
 func setupDeck():
 	for c in $Deck/Cards.get_children():

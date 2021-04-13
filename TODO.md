@@ -1,5 +1,11 @@
-- [ ] fix bug transitioning to GameOver screen
+- [ ] get it hosted
+- [ ] make it winnable / loseable
+  - [ ] fix bug transitioning to GameOver screen
+- [ ] share it
 
+Nice to have
+
+- [ ] Show damage dealt more clearly (e.g. show damage per card + summary of damage), same idea for armor / healing
 
 Programming stuff
 

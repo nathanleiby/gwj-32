@@ -65,7 +65,7 @@ IDEATION
 
 - heptagram or other cool symbol instead of Godot robot in loading screens
 
-- in autochess, each battle is independent and you don't LOSE from just losing one
+- in autochess, each battle is independent and you don't LOSE from just losing one`
   - maybe.. something like x strikes and you're out or a health meter for how badly you lost?
   - nice part of this is that you can see if your deck isn't working well and pivot.
   - this might be more fun in PvP land
@@ -73,3 +73,6 @@ IDEATION
 - each position in your queue is unlocked with one of the metals
 - each position can be "fortified" with one of the metals (for bonus interaction)
 - you choose a primary metal for each playthrough, giving you pros/cons
+
+- During the Econ scene.. allow "Pay for Reroll" to allow paying a bit to smooth some RNG
+- show max deck size more clearly in UI
