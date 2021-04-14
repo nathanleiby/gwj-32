@@ -5,6 +5,15 @@ You are trying to reach the alchemist and take the stone. Yet when you kill him,
 
 
 
+Character Ideas
+- Magus of Mercury
+- Silver Sailor
+- Iron Sides
+- Heart of Gold
+- Tin Man
+- Lead Lord
+- Copper
+  - electronics inspired? apoc tech, steampunk, copper pipes, etc
 
 
 ## Theming

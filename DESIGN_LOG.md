@@ -2,8 +2,11 @@
 
 ## April 14
 
+- 330pm - added a level select screen
+![](2021-04-14-15-29-36.png)
 - 2pm - working on side effort.. event bus / event queue
   - reading: https://gameprogrammingpatterns.com/event-queue.html
+
 ## April 13
 
 - 8pm - I notice myself looking away during battles.. since i can't act during them
