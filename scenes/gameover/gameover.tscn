@@ -1,0 +1,20 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_right = 1032.0
+margin_bottom = 594.0
+text = "GAME OVER
+
+VICTORY / DEFEAT
+
+Died on Level 5
+
+Queue Size = X
+Deck = Y
+
+Score = ..."
+__meta__ = {
+"_edit_use_anchors_": false
+}

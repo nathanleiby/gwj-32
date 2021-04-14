@@ -18,6 +18,7 @@
 - think through core game state (Player properties, current level, score, etc)
 - controller input
 - automatically deploy latest build to itch  https://hub.docker.com/r/barichello/godot-ci , https://gitlab.com/barichello/godot-ci/
+- load game params, cards, etc from CSV/JSON https://youtu.be/MHeMxiDwo4o?t=523
 
 ## Need clarity
 

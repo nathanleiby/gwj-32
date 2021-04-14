@@ -1,0 +1,209 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://resources/fonts/normal.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/img/Crescent.svg" type="Texture" id=2]
+[ext_resource path="res://assets/img/Sun_symbol.svg" type="Texture" id=3]
+[ext_resource path="res://assets/img/Mars_symbol.svg" type="Texture" id=4]
+[ext_resource path="res://assets/img/Mercury_symbol.svg" type="Texture" id=5]
+[ext_resource path="res://assets/img/Saturn_symbol.svg" type="Texture" id=6]
+[ext_resource path="res://assets/img/Jupiter_symbol.svg" type="Texture" id=7]
+[ext_resource path="res://assets/img/Venus_symbol.svg" type="Texture" id=8]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.121569, 0.737255, 0.0352941, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.376471, 0.176471, 0.00392157, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.811765, 0.72549, 0.0235294, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.654902, 0.0196078, 0.0196078, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.929412, 0.545098, 0.00392157, 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -0.749176
+margin_bottom = -0.749146
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+margin_left = 317.0
+margin_top = 2.0
+margin_right = 721.0
+margin_bottom = 49.0
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Which Metal do you seek?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Container" type="Container" parent="Panel"]
+margin_left = 69.1213
+margin_top = 112.707
+margin_right = 984.121
+margin_bottom = 570.707
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Silver" type="Panel" parent="Panel/Container"]
+margin_right = 140.0
+margin_bottom = 100.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="Button" type="Button" parent="Panel/Container/Silver"]
+margin_left = 31.8164
+margin_top = 73.5208
+margin_right = 111.816
+margin_bottom = 93.5208
+text = "Silver"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image" type="Sprite" parent="Panel/Container/Silver"]
+position = Vector2( 69.3932, 36.8003 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="Lead" type="Panel" parent="Panel/Container"]
+margin_top = 200.0
+margin_right = 140.0
+margin_bottom = 300.0
+custom_styles/panel = SubResource( 3 )
+
+[node name="Button" type="Button" parent="Panel/Container/Lead"]
+margin_left = 31.0672
+margin_top = 72.7717
+margin_right = 111.067
+margin_bottom = 92.7717
+text = "Lead"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image" type="Sprite" parent="Panel/Container/Lead"]
+position = Vector2( 68.644, 36.0511 )
+texture = ExtResource( 6 )
+
+[node name="Copper" type="Panel" parent="Panel/Container"]
+margin_left = 200.0
+margin_top = 200.0
+margin_right = 340.0
+margin_bottom = 300.0
+custom_styles/panel = SubResource( 4 )
+
+[node name="Button" type="Button" parent="Panel/Container/Copper"]
+margin_left = 31.0672
+margin_top = 72.7717
+margin_right = 111.067
+margin_bottom = 92.7717
+text = "Copper"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image" type="Sprite" parent="Panel/Container/Copper"]
+position = Vector2( 67.8949, 36.0511 )
+scale = Vector2( 0.66, 0.66 )
+texture = ExtResource( 8 )
+
+[node name="Mercury" type="Panel" parent="Panel/Container"]
+margin_left = 400.0
+margin_top = 200.0
+margin_right = 540.0
+margin_bottom = 300.0
+custom_styles/panel = SubResource( 5 )
+
+[node name="Button" type="Button" parent="Panel/Container/Mercury"]
+margin_left = 29.569
+margin_top = 72.0225
+margin_right = 109.569
+margin_bottom = 92.0225
+text = "Mercury"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image" type="Sprite" parent="Panel/Container/Mercury"]
+position = Vector2( 68.644, 36.0511 )
+texture = ExtResource( 5 )
+
+[node name="Gold" type="Panel" parent="Panel/Container"]
+margin_left = 200.0
+margin_right = 340.0
+margin_bottom = 100.0
+custom_styles/panel = SubResource( 2 )
+
+[node name="Button" type="Button" parent="Panel/Container/Gold"]
+margin_left = 30.5565
+margin_top = 75.4107
+margin_right = 110.557
+margin_bottom = 95.4107
+text = "Gold"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image" type="Sprite" parent="Panel/Container/Gold"]
+position = Vector2( 71.283, 39.9501 )
+texture = ExtResource( 3 )
+
+[node name="Iron" type="Panel" parent="Panel/Container"]
+margin_left = 400.0
+margin_right = 540.0
+margin_bottom = 100.0
+custom_styles/panel = SubResource( 6 )
+
+[node name="Button" type="Button" parent="Panel/Container/Iron"]
+margin_left = 30.5565
+margin_top = 75.4107
+margin_right = 110.557
+margin_bottom = 95.4107
+text = "Iron"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image" type="Sprite" parent="Panel/Container/Iron"]
+position = Vector2( 70.5338, 39.9501 )
+texture = ExtResource( 4 )
+
+[node name="Tin" type="Panel" parent="Panel/Container"]
+margin_left = 600.0
+margin_right = 740.0
+margin_bottom = 100.0
+custom_styles/panel = SubResource( 7 )
+
+[node name="Button" type="Button" parent="Panel/Container/Tin"]
+margin_left = 30.5565
+margin_top = 75.4107
+margin_right = 110.557
+margin_bottom = 95.4107
+text = "Tin"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image" type="Sprite" parent="Panel/Container/Tin"]
+position = Vector2( 71.283, 39.9501 )
+texture = ExtResource( 7 )

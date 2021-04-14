@@ -1,5 +1,9 @@
 # Design Log
 
+## April 14
+
+- 2pm - working on side effort.. event bus / event queue
+  - reading: https://gameprogrammingpatterns.com/event-queue.html
 ## April 13
 
 - 8pm - I notice myself looking away during battles.. since i can't act during them
