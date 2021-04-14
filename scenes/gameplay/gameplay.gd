@@ -44,7 +44,7 @@ func pre_start(params):
 	shuffle_deck()
 
 	opponentHp = 10 * Game.level
-	opponentAttack = 2 * Game.level
+	opponentAttack = int(floor(1.5 * Game.level))
 
 
 # `start()` is called when the graphic transition ends.
@@ -77,11 +77,14 @@ func _next_tick():
 	if opponentHp <= 0:
 		Player.money += Game.level * 2
 		Game.level += 1
-		Game.change_scene("res://scenes/econ/econ.tscn")
+		if Game.level > 7:
+			Game.change_scene("res://scenes/gameover/victory.tscn")
+		else:
+			Game.change_scene("res://scenes/econ/econ.tscn")
 		return
 
 	if Player.currentHP <= 0:
-		Game.change_scene("res://scenes/gameover/gameover.tscn")
+		Game.change_scene("res://scenes/gameover/defeat.tscn")
 		return
 
 	########################################

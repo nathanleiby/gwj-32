@@ -2,7 +2,8 @@
 
 ## April 13
 
-7:30 pm - how it looks
+- 8pm - I notice myself looking away during battles.. since i can't act during them
+- 7:30 pm - how it looks
 ![](2021-04-13-19-36-24.png)
 
 - trying to make card choices more tactical and engaging. Adding first cards to use "queue" based mechanics.

@@ -1,20 +1,29 @@
+# Todo List
+
+## Now
+
+
 - [ ] make it winnable / loseable
-  - [ ] fix bug transitioning to GameOver screen
-- [ ] share it
+- [ ] fix bug transitioning to GameOver screen
 
-Nice to have
+## Actionable
 
-- [ ] Show damage dealt more clearly (e.g. show damage per card + summary of damage), same idea for armor / healing
+- show cost to trash a card
+- add a "how to play" screen
+- share it with `#gamedev` discord for feedback v1
 
-Programming stuff
+## Backlog
 
+- Show damage dealt more clearly (e.g. show damage per card + summary of damage), same idea for armor / healing
+- Fix non-ideal UX:  remove need for "refresh" button in econ screen
 - abstract out lots of key params into a consts / globals files
 - event bus, signals
 - think through core game state (Player properties, current level, score, etc)
 - controller input
-- multiplayer
+- automatically deploy latest build to itch  https://hub.docker.com/r/barichello/godot-ci , https://gitlab.com/barichello/godot-ci/
 
-Deploy
+## Need clarity
 
-- [ ] automatically deploy latest build to itch  https://hub.docker.com/r/barichello/godot-ci , https://gitlab.com/barichello/godot-ci/
+- Make the battle more exciting
+- co-op multiplayer
 
