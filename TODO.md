@@ -1,3 +1,4 @@
+- [ ] push code to GH
 - [ ] get it hosted
 - [ ] make it winnable / loseable
   - [ ] fix bug transitioning to GameOver screen
