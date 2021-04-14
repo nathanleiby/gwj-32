@@ -2,14 +2,11 @@
 
 ## Now
 
-
-- [ ] make it winnable / loseable
-- [ ] fix bug transitioning to GameOver screen
+- add a "how to play" screen
 
 ## Actionable
 
 - show cost to trash a card
-- add a "how to play" screen
 - share it with `#gamedev` discord for feedback v1
 
 ## Backlog
