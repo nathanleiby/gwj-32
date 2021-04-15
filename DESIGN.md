@@ -77,3 +77,12 @@ IDEATION
 - Might we have an aspect that lets you draw 2 cards per turn, making your queue move faster? How would (or wouldn't) this be helpful?
   - one aspect could let you start with your queue (partially) full
 - Alchemist with 2 part battle.. so you _think_ you can defeat him early (after, say, 3 levels) only to realize he has a harder form.
+
+- AWARDS: show total damage per round, total damage in a matchup...
+  - track these as fun metrics for when you die .. e.g.
+    - max damage dealt in a tick/battle/full game
+    - max armor generated in a
+
+- consider alternating ticks with the enemy, so you can see the back and forth more clearly
+
+- give the enemy a deck/queue, so it's clear what they're doing
