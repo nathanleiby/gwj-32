@@ -110,3 +110,13 @@ text = "Titan of Tin"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Explain" type="RichTextLabel" parent="Enemy"]
+margin_left = -154.0
+margin_top = 200.0
+margin_right = 153.0
+margin_bottom = 240.0
+text = "attacks for X damage every other turn"
+__meta__ = {
+"_edit_use_anchors_": false
+}

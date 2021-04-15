@@ -1,13 +1,10 @@
 extends Control
 
-# func _ready():
-#     var button = Button.new()
-#     button.text = "Click me"
-#     button.connect("pressed", self, "_button_pressed")
-#     add_child(button)
 
-# func _on_Button_pressed(extra_arg_0: String) -> void:
-#     print(extra_arg_0)
+func pre_start(params):
+	print(params)
+	# TODO: unlock alchemist battle given some condition?
+	return
 
 
 func _on_Button_pressed(zone):

@@ -23,7 +23,7 @@ var selfArmor = 0
 
 const zoneToEnemy = {
 	'tin': 'Titan of Tin',
-	'copper': 'Copper Cultist',
+	'copper': 'Copper Cyclops',
 	'iron': 'Iron Ifrit',
 	'mercury': "Magus of Mercury",
 	'silver': 'Silver Sailor',
@@ -44,6 +44,24 @@ func pre_start(params):
 		var val = params[key]
 		printt("", key, val)
 
+	# Setup game state
+	opponentHp = 10 * Game.level
+	opponentAttack = int(floor(1.5 * Game.level))
+
+	# TODO: Add Alchemist levels
+	# if Game.level == 8:
+	# 	# final level edge case alchemist
+	# 	opponentHp = 100
+	# 	opponentAttack = 25
+	# if Game.level == 9:
+	# 	# final level edge case alchemist, phase 2
+	# 	opponentHp = 200
+	# 	opponentAttack = 40
+
+	deck = Player.deck.duplicate()
+	shuffle_deck()
+
+	# Prepare UI
 	$PlayerBoard/Deck.text = ""
 	$PlayerBoard/Queue.text = ""
 	$PlayerBoard/Discard.text = ""
@@ -51,12 +69,7 @@ func pre_start(params):
 	$EnemyStatus/Title.text = "Enemy"  # TODO: Specific enemy
 	$Enemy/Title.text = zoneToEnemy[Game.zone]
 	$Enemy/Image.texture = load("res://assets/img/enemies/%s.svg" % Game.zone)
-
-	deck = Player.deck.duplicate()
-	shuffle_deck()
-
-	opponentHp = 10 * Game.level
-	opponentAttack = int(floor(1.5 * Game.level))
+	$Enemy/Explain.text = "attacks for %s damage every other turn" % opponentAttack
 
 
 # `start()` is called when the graphic transition ends.
@@ -138,7 +151,7 @@ func _next_tick():
 		selfArmor += effect.get(CardEffects.Armor, 0)
 
 	# Enemy effects
-	if combatTickerValue % 2 == 0:  # enemy attacks every other turn
+	if combatTickerValue % 2 == 1:  # enemy attacks every other turn
 		selfArmor -= opponentAttack
 		if selfArmor < 0:
 			Player.currentHP += selfArmor

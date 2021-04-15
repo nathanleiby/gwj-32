@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cyclops.svg-5efa762be6882fbc6f3155e47efd8371.stex"
+path="res://.import/alchemist.svg-ed5edd8b16daa25f87db347dd1a26a0e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/enemies/cyclops.svg"
-dest_files=[ "res://.import/cyclops.svg-5efa762be6882fbc6f3155e47efd8371.stex" ]
+source_file="res://assets/img/enemies/alchemist.svg"
+dest_files=[ "res://.import/alchemist.svg-ed5edd8b16daa25f87db347dd1a26a0e.stex" ]
 
 [params]
 

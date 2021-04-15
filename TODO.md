@@ -2,11 +2,7 @@
 
 ## Now
 
-
 - make battle easier to understand
-  - show enemy image
-  - health bar for self and enemy
-  - armor gauge for self and enemy
   - show summarized damage in big #
 
 ## Actionable

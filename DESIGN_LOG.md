@@ -2,6 +2,7 @@
 
 ## April 15
 
+- 330pm: need a way to increase max HP, and to heal. otherwise it's hard to scale to fighting bigger baddies.
 - 3pm: working on clarity of "battle" scene
 ![](2021-04-15-15-00-31.png)
 
