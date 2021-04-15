@@ -72,9 +72,16 @@ func shuffle_deck():
 	deck.shuffle()
 
 
+var waitTicksIfOver = 3
+
+
 func _next_tick():
 	## Change scene if we won! (1 tick after the win tick)
 	if opponentHp <= 0:
+		if waitTicksIfOver >= 0:
+			waitTicksIfOver -= 1
+			return
+
 		Player.money += Game.level * 2
 		Game.level += 1
 		if Game.level > 7:
@@ -84,6 +91,10 @@ func _next_tick():
 		return
 
 	if Player.currentHP <= 0:
+		if waitTicksIfOver >= 0:
+			waitTicksIfOver -= 1
+			return
+
 		Game.change_scene("res://scenes/gameover/defeat.tscn")
 		return
 
