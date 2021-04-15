@@ -11,7 +11,5 @@ extends Control
 
 
 func _on_Button_pressed(zone):
-	var params = {
-		'zone': zone,
-	}
-	Game.change_scene("res://scenes/gameplay/gameplay.tscn", params)
+	Game.zone = zone
+	Game.change_scene("res://scenes/gameplay/gameplay.tscn")
