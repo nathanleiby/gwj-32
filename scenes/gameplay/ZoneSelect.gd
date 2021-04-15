@@ -3,7 +3,23 @@ extends Control
 
 func pre_start(params):
 	print(params)
-	# TODO: unlock alchemist battle given some condition?
+
+	# Indicate metals that are complete
+	if Player.aspects['silver']:
+		$Panel/Container/Silver/Button.hide()
+	if Player.aspects['copper']:
+		$Panel/Container/Copper/Button.hide()
+	if Player.aspects['tin']:
+		$Panel/Container/Tin/Button.hide()
+	if Player.aspects['lead']:
+		$Panel/Container/Lead/Button.hide()
+	if Player.aspects['iron']:
+		$Panel/Container/Iron/Button.hide()
+	if Player.aspects['gold']:
+		$Panel/Container/Gold/Button.hide()
+	if Player.aspects['mercury']:
+		$Panel/Container/Mercury/Button.hide()
+
 	return
 
 

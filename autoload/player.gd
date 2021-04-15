@@ -36,3 +36,14 @@ var queueSize: int = 3
 
 ## Items
 # ..
+
+## Aspects
+var aspects = {
+	'tin': false,
+	'copper': false,
+	'iron': false,
+	'mercury': false,
+	'silver': false,
+	'lead': false,
+	'gold': false,
+}

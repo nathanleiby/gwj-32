@@ -2,12 +2,11 @@
 
 ## Now
 
-- make battle easier to understand
-  - show summarized damage in big #
 
 ## Actionable
 
-- select levels and fight person from that level
+- make battle easier to understand
+  - show summarized damage in big #
 - make the enemy also backed by a queue
 - show the enemy's queue
 - show cost to trash a card

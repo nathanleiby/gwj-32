@@ -7,6 +7,7 @@ extends Node
 
 # Progress through game
 var level: int = 1
+var zones_complete: int = 0  # can get this from aspects earned, as well
 var zone = ""
 
 var size: Vector2 setget , get_size
@@ -15,6 +16,11 @@ onready var main: Main = get_node_or_null("/root/Main")
 
 const BATTLE_SCENE = "res://scenes/gameplay/battle.tscn"
 const ZONE_SELECT_SCENE = "res://scenes/gameplay/ZoneSelect.tscn"
+const ECON_SCENE = "res://scenes/econ/econ.tscn"
+const VICTORY_SCENE = "res://scenes/gameover/victory.tscn"
+const DEFEAT_SCENE = "res://scenes/gameover/defeat.tscn"
+
+const LEVELS_PER_ZONE = 3
 
 
 func _ready():
@@ -56,3 +62,14 @@ func get_active_scene() -> Node:
 
 func get_size():
 	return main.size
+
+
+const ZONE_TO_ENEMY = {
+	'tin': 'Titan of Tin',
+	'copper': 'Copper Cyclops',
+	'iron': 'Iron Ifrit',
+	'mercury': "Magus of Mercury",
+	'silver': 'Silver Sailor',
+	'lead': 'Leaden Lord',
+	'gold': 'Golden Ghost'
+}

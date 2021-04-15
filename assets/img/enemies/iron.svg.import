@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Mars_symbol.svg-d9358e0a3390dd17686c4a33d54dc89b.stex"
+path="res://.import/iron.svg-7eecb568a7ccc040e09122328d7b3c0b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/alchemy-symbols/Mars_symbol.svg"
-dest_files=[ "res://.import/Mars_symbol.svg-d9358e0a3390dd17686c4a33d54dc89b.stex" ]
+source_file="res://assets/img/enemies/iron.svg"
+dest_files=[ "res://.import/iron.svg-7eecb568a7ccc040e09122328d7b3c0b.stex" ]
 
 [params]
 

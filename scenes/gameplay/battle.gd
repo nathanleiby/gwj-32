@@ -21,16 +21,6 @@ var opponentAttackFrequency = 2
 var deck
 var selfArmor = 0
 
-const zoneToEnemy = {
-	'tin': 'Titan of Tin',
-	'copper': 'Copper Cyclops',
-	'iron': 'Iron Ifrit',
-	'mercury': "Magus of Mercury",
-	'silver': 'Silver Sailor',
-	'lead': 'Leaden Lord',
-	'gold': 'Golden Ghost'
-}
-
 
 # `pre_start()` is called when a scene is totally loaded.
 # Use this function to receive params from the scene which
@@ -45,17 +35,17 @@ func pre_start(params):
 		printt("", key, val)
 
 	# Setup game state
-	opponentHp = 10 * Game.level
-	opponentAttack = int(floor(1.5 * Game.level))
+	opponentHp = 10 * Game.LEVELS_PER_ZONE * Game.zones_complete + Game.level
+	opponentAttack = int(floor(Game.LEVELS_PER_ZONE * Game.zones_complete + Game.level))
 
 	# TODO: Add Alchemist levels
 	# if Game.level == 8:
 	# 	# final level edge case alchemist
-	# 	opponentHp = 100
+	# 	opponentHp = 250
 	# 	opponentAttack = 25
 	# if Game.level == 9:
 	# 	# final level edge case alchemist, phase 2
-	# 	opponentHp = 200
+	# 	opponentHp = 400
 	# 	opponentAttack = 40
 
 	deck = Player.deck.duplicate()
@@ -67,9 +57,10 @@ func pre_start(params):
 	$PlayerBoard/Discard.text = ""
 	$PlayerStatus/Title.text = "Player"
 	$EnemyStatus/Title.text = "Enemy"  # TODO: Specific enemy
-	$Enemy/Title.text = zoneToEnemy[Game.zone]
+	$Enemy/Title.text = Game.ZONE_TO_ENEMY[Game.zone]
 	$Enemy/Image.texture = load("res://assets/img/enemies/%s.svg" % Game.zone)
 	$Enemy/Explain.text = "attacks for %s damage every other turn" % opponentAttack
+	$Enemy/ZoneLevel.text = "Zone %s, Level %s" % [Game.zones_complete + 1, Game.level]
 
 
 # `start()` is called when the graphic transition ends.
@@ -107,12 +98,22 @@ func _next_tick():
 			waitTicksIfOver -= 1
 			return
 
-		Player.money += Game.level * 2
+		# winings
+		Player.money += (Game.zones_complete * Game.LEVELS_PER_ZONE + Game.level)
 		Game.level += 1
-		if Game.level > 7:
-			Game.change_scene("res://scenes/gameover/victory.tscn")
+
+		# game over? or econ scene
+		if Game.level > Game.LEVELS_PER_ZONE:
+			if Game.zone == 'alchemist':
+				Game.change_scene(Game.VICTORY_SCENE)
+			else:
+				Player.aspects[Game.zone] = true
+				Game.level = 1
+				Game.zones_complete += 1
+				Game.change_scene(Game.ZONE_SELECT_SCENE)
 		else:
-			Game.change_scene("res://scenes/econ/econ.tscn")
+			Game.change_scene(Game.ECON_SCENE)
+
 		return
 
 	if Player.currentHP <= 0:
@@ -120,7 +121,7 @@ func _next_tick():
 			waitTicksIfOver -= 1
 			return
 
-		Game.change_scene("res://scenes/gameover/defeat.tscn")
+		Game.change_scene(Game.DEFEAT_SCENE)
 		return
 
 	########################################
