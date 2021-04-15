@@ -3,10 +3,10 @@
 ## Now
 
 - Show damage dealt more clearly (e.g. show damage per card + summary of damage), same idea for armor / healing
-- select levels
 
 ## Actionable
 
+- select levels and fight person from that level
 - show cost to trash a card
 - share it with `#gamedev` discord for feedback v1
 

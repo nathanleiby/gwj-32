@@ -75,3 +75,5 @@ IDEATION
 - how might player  queues interact? e.g. imagine them scrolling in alignment with each other (and monster queue too!). What would occur if two aligned?
 
 - Might we have an aspect that lets you draw 2 cards per turn, making your queue move faster? How would (or wouldn't) this be helpful?
+  - one aspect could let you start with your queue (partially) full
+- Alchemist with 2 part battle.. so you _think_ you can defeat him early (after, say, 3 levels) only to realize he has a harder form.

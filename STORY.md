@@ -5,14 +5,27 @@ You are trying to reach the alchemist and take the stone. Yet when you kill him,
 
 
 
-Character Ideas
+## Character Ideas
+
 - Magus of Mercury
-- Silver Sailor
-- Iron Sides
-- Heart of Gold
-- Tin Man
-- Lead Lord
-- Copper
+  - https://game-icons.net/1x1/delapouite/wizard-face.html
+- Silver Sailor,Scorpion
+  - https://game-icons.net/1x1/delapouite/diving-helmet.html
+  - https://game-icons.net/1x1/lorc/scorpion.html
+- Iron Ifrit
+  https://game-icons.net/1x1/lorc/ifrit.html
+- Heart of Gold (Golden Ghoul, Ghost)
+  - https://game-icons.net/1x1/lorc/chained-heart.html
+  - https://game-icons.net/1x1/lorc/crowned-skull.html
+  - https://game-icons.net/1x1/lorc/spectre.html
+- Titan of Tin
+  - https://game-icons.net/1x1/delapouite/atlas.html
+- Leaden Lord
+  - https://game-icons.net/1x1/delapouite/throne-king.html
+- Copper Cyclops, Cultist
+  - https://game-icons.net/1x1/delapouite/spider-eye.html
+  - https://game-icons.net/1x1/lorc/cyclops.html
+  - https://game-icons.net/1x1/lorc/cowled.html
   - electronics inspired? apoc tech, steampunk, copper pipes, etc
 
 

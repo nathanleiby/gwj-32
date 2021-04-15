@@ -72,3 +72,5 @@ margin_top = 16.0
 margin_right = 757.0
 margin_bottom = 116.0
 text = "<DISCARD>"
+
+[node name="Player" type="Node2D" parent="."]

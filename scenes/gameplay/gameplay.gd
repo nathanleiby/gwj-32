@@ -110,27 +110,9 @@ func _next_tick():
 	########################################
 
 	# Player cards
-	for cur in queue:
-		if cur == cardsDB.Attack1:
-			opponentHp -= 1
-		if cur == cardsDB.Attack2:
-			opponentHp -= 2
-		if cur == cardsDB.QueueBlade:
-			var value = 0
-			for q in queue:
-				if cardsDB.DATA[q]["type"] == cardsDB.AttackType:
-					value += 1
-			opponentHp -= value
-		if cur == cardsDB.Defend1:
-			selfArmor += 1
-		if cur == cardsDB.Defend2:
-			selfArmor += 2
-		if cur == cardsDB.QueueShield:
-			var value = 0
-			for q in queue:
-				if cardsDB.DATA[q]["type"] == cardsDB.DefendType:
-					value += 1
-			selfArmor += value
+	for effect in cardEffects():
+		opponentHp -= effect.get(CardEffects.Damage, 0)
+		selfArmor += effect.get(CardEffects.Armor, 0)
 
 	# Enemy effects
 	if combatTickerValue % 2 == 0:  # enemy attacks every other turn
@@ -170,22 +152,10 @@ const X_OFFSET_QUEUECARD = 60
 
 func updateQueue():
 	## Show cards in queue
-	var queueText = ""
-	for i in range(0, queueSize):
-		if i > 0:
-			queueText += " | "
-
-		if i < len(queue):
-			var curCard = queue[i]
-			print(curCard)
-			queueText += cardsDB.DATA[curCard]["title"]
-		else:
-			queueText += "<empty>"
-
-	$PlayerBoard/Queue.text = queueText
 	for c in $PlayerBoard/Queue.get_children():
 		$PlayerBoard/Queue.remove_child(c)
 
+	var effects = cardEffects()
 	for i in range(queueSize):
 		if i < len(queue):
 			var card = cardScene.instance()
@@ -193,4 +163,55 @@ func updateQueue():
 			card.setCard(queue[i])
 			$PlayerBoard/Queue.add_child(card)
 
+			# Damage label
+			var damageFromCard = effects[i].get(CardEffects.Damage, 0)
+			if damageFromCard != 0:
+				var label = Label.new()
+				label.set_position(Vector2((i + 1) * X_OFFSET_QUEUECARD - 25, 0))
+				label.text = str(damageFromCard)
+				label.add_color_override("font_color", Color.red)
+				$PlayerBoard/Queue.add_child(label)
+
+			# Armor label
+			var armorFromCard = effects[i].get(CardEffects.Armor, 0)
+			if armorFromCard != 0:
+				var armorLabel = Label.new()
+				armorLabel.set_position(Vector2((i + 1) * X_OFFSET_QUEUECARD, 0))
+				armorLabel.text = str(armorFromCard)
+				armorLabel.add_color_override("font_color", Color.blue)
+				$PlayerBoard/Queue.add_child(armorLabel)
+		else:
+			continue
 		# TODO: Display empty queue spaces
+
+
+enum CardEffects {
+	Damage,
+	Armor,
+}
+
+
+func cardEffects():
+	var out = []
+	for cur in queue:
+		if cur == cardsDB.Attack1:
+			out.push_back({CardEffects.Damage: 1})
+		if cur == cardsDB.Attack2:
+			out.push_back({CardEffects.Damage: 2})
+		if cur == cardsDB.QueueBlade:
+			var value = 0
+			for q in queue:
+				if cardsDB.DATA[q]["type"] == cardsDB.AttackType:
+					value += 1
+			out.push_back({CardEffects.Damage: value})
+		if cur == cardsDB.Defend1:
+			out.push_back({CardEffects.Armor: 1})
+		if cur == cardsDB.Defend2:
+			out.push_back({CardEffects.Armor: 2})
+		if cur == cardsDB.QueueShield:
+			var value = 0
+			for q in queue:
+				if cardsDB.DATA[q]["type"] == cardsDB.DefendType:
+					value += 1
+			out.push_back({CardEffects.Armor: value})
+	return out
