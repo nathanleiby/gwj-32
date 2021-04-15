@@ -1,5 +1,10 @@
 # Design Log
 
+## April 15
+
+- 3pm: working on clarity of "battle" scene
+![](2021-04-15-15-00-31.png)
+
 ## April 14
 
 - problem: if you don't have enough health, you die instantly at start of battle before there's time to build up armor

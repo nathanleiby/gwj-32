@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spectre.svg-6dfbaeb8be2518a1d41a7d34adaa8b74.stex"
+path="res://.import/stack.svg-6ad0559cec84738a754b6fa773c5a6fc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/enemies/spectre.svg"
-dest_files=[ "res://.import/spectre.svg-6dfbaeb8be2518a1d41a7d34adaa8b74.stex" ]
+source_file="res://assets/img/icons/stack.svg"
+dest_files=[ "res://.import/stack.svg-6ad0559cec84738a754b6fa773c5a6fc.stex" ]
 
 [params]
 

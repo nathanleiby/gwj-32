@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wizard-face.svg-f8e7a8e8aeb68f9180a1089d4df6518b.stex"
+path="res://.import/card-burn.svg-00115a551fc32b6a3bdb21440bfa2451.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/enemies/wizard-face.svg"
-dest_files=[ "res://.import/wizard-face.svg-f8e7a8e8aeb68f9180a1089d4df6518b.stex" ]
+source_file="res://assets/img/icons/card-burn.svg"
+dest_files=[ "res://.import/card-burn.svg-00115a551fc32b6a3bdb21440bfa2451.stex" ]
 
 [params]
 

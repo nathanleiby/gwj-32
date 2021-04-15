@@ -91,3 +91,5 @@ IDEATION
   - e.g. 1st: 1.0, 2nd: 1.5, 3rd: 2.0, etc...
   - Needs lots of tuning but the idea is that you can choose any order (or perhaps optimize the order!)
   - the aspect you receive from each will affect ease, too..
+
+- consider adding "strength" or "intensity" as a core stat, and it its a multiplier that affects cards.. would make "enemy strength" easier to understand

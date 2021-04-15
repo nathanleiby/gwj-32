@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/throne-king.svg-55db5c75d15c77ec88c7804888842148.stex"
+path="res://.import/mercury.svg-19986f17353af88c37d35e1eb351c678.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/enemies/throne-king.svg"
-dest_files=[ "res://.import/throne-king.svg-55db5c75d15c77ec88c7804888842148.stex" ]
+source_file="res://assets/img/enemies/mercury.svg"
+dest_files=[ "res://.import/mercury.svg-19986f17353af88c37d35e1eb351c678.stex" ]
 
 [params]
 

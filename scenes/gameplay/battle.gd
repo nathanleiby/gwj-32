@@ -21,6 +21,16 @@ var opponentAttackFrequency = 2
 var deck
 var selfArmor = 0
 
+const zoneToEnemy = {
+	'tin': 'Titan of Tin',
+	'copper': 'Copper Cultist',
+	'iron': 'Iron Ifrit',
+	'mercury': "Magus of Mercury",
+	'silver': 'Silver Sailor',
+	'lead': 'Leaden Lord',
+	'gold': 'Golden Ghost'
+}
+
 
 # `pre_start()` is called when a scene is totally loaded.
 # Use this function to receive params from the scene which
@@ -34,11 +44,13 @@ func pre_start(params):
 		var val = params[key]
 		printt("", key, val)
 
-	# TODO: Do we need to hide placeholder text?
-	$GameStats.text = ""
 	$PlayerBoard/Deck.text = ""
 	$PlayerBoard/Queue.text = ""
 	$PlayerBoard/Discard.text = ""
+	$PlayerStatus/Title.text = "Player"
+	$EnemyStatus/Title.text = "Enemy"  # TODO: Specific enemy
+	$Enemy/Title.text = zoneToEnemy[Game.zone]
+	$Enemy/Image.texture = load("res://assets/img/enemies/%s.svg" % Game.zone)
 
 	deck = Player.deck.duplicate()
 	shuffle_deck()
@@ -133,28 +145,14 @@ func _next_tick():
 			selfArmor = 0
 
 	## Update game UI
-	$GameStats.text = (
-		""
-		+ "Level = "
-		+ str(Game.level)
-		+ "\n"
-		+ "\n"
-		+ "Self HP = "
-		+ str(Player.currentHP)
-		+ "\n"
-		+ "Self Armor = "
-		+ str(selfArmor)
-		+ "\n"
-		+ "\n"
-		+ "Opponent HP = "
-		+ str(opponentHp)
-		+ "\n"
-		+ "Opponent Strength = "
-		+ str(opponentAttack)
-	)
+	$PlayerStatus/HP.text = str(Player.currentHP) + " / " + str(Player.maxHP)
+	$PlayerStatus/Armor.text = str(selfArmor)
 
-	$PlayerBoard/Deck.text = str(len(deck))
-	$PlayerBoard/Discard.text = str(len(discard))
+	$EnemyStatus/HP.text = str(opponentHp)
+	$EnemyStatus/Armor.text = str(0)
+
+	$PlayerBoard/Deck.text = "%s cards" % len(deck)
+	$PlayerBoard/Discard.text = "%s cards" % len(discard)
 	updateQueue()
 
 
@@ -189,7 +187,7 @@ func updateQueue():
 				var armorLabel = Label.new()
 				armorLabel.set_position(Vector2((i + 1) * X_OFFSET_QUEUECARD, 0))
 				armorLabel.text = str(armorFromCard)
-				armorLabel.add_color_override("font_color", Color.blue)
+				armorLabel.add_color_override("font_color", Color(.3, .3, .3))
 				$PlayerBoard/Queue.add_child(armorLabel)
 		else:
 			continue

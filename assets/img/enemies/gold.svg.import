@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cowled.svg-a7a52b8b88112be95d3911627c8e554d.stex"
+path="res://.import/gold.svg-d7fa894c05c00d5e870ee594cb7c5bf1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/enemies/cowled.svg"
-dest_files=[ "res://.import/cowled.svg-a7a52b8b88112be95d3911627c8e554d.stex" ]
+source_file="res://assets/img/enemies/gold.svg"
+dest_files=[ "res://.import/gold.svg-d7fa894c05c00d5e870ee594cb7c5bf1.stex" ]
 
 [params]
 

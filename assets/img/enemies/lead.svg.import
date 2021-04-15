@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/diving-helmet.svg-e158f2cf2268a66ed5ab8bdcf5a61fcc.stex"
+path="res://.import/lead.svg-1002cefe7b8047a3c7516214423f8b64.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/enemies/diving-helmet.svg"
-dest_files=[ "res://.import/diving-helmet.svg-e158f2cf2268a66ed5ab8bdcf5a61fcc.stex" ]
+source_file="res://assets/img/enemies/lead.svg"
+dest_files=[ "res://.import/lead.svg-1002cefe7b8047a3c7516214423f8b64.stex" ]
 
 [params]
 
