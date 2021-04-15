@@ -2,8 +2,7 @@
 
 You are trying to reach the alchemist and take the stone. Yet when you kill him, you realize.. was he immortal? Will you be immortal, or do you merely become the next alchemist... whom other will hunt
 
-
-
+possible rogue-like frame: You *already drank* the elixir of life, you just didn't realize it. You are reborn infinitely trying to fight the alchemist.. but the alchemist knows that what you truly seek is an elixir of death.
 
 ## Character Ideas
 

@@ -29,7 +29,7 @@ var selfArmor = 0
 #
 # At this point the game is paused (`get_tree().paused = true`).
 func pre_start(params):
-	print("\ngameplay.gd:pre_start() called with params = ")
+	print("\nbattle.gd:pre_start() called with params = ")
 	for key in params:
 		var val = params[key]
 		printt("", key, val)
@@ -49,7 +49,7 @@ func pre_start(params):
 
 # `start()` is called when the graphic transition ends.
 func start():
-	print("\ngameplay.gd:start() called")
+	print("\nbattle.gd:start() called")
 	var active_scene: Node = Game.get_active_scene()
 	print("\nCurrent active scene is: ", active_scene.name, " (", active_scene.filename, ")")
 

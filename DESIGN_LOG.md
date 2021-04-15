@@ -2,6 +2,7 @@
 
 ## April 14
 
+- problem: if you don't have enough health, you die instantly at start of battle before there's time to build up armor
 - 1130pm - winning is possible, but reasonably difficult. I won once by increaing my queue only. perhaps queue prices should increase over time?
 - 330pm - added a level select screen
 ![](2021-04-14-15-29-36.png)

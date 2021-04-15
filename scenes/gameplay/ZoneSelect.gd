@@ -12,4 +12,4 @@ extends Control
 
 func _on_Button_pressed(zone):
 	Game.zone = zone
-	Game.change_scene("res://scenes/gameplay/gameplay.tscn")
+	Game.change_scene(Game.BATTLE_SCENE)

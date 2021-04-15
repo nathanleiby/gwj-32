@@ -134,6 +134,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="TextureProgress" type="TextureProgress" parent="HUD/HP"]
+margin_left = -166.0
+margin_right = -8.0
+margin_bottom = 52.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Cash" type="RichTextLabel" parent="HUD"]
 margin_left = 659.165
 margin_right = 779.165

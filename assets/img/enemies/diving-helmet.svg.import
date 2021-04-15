@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/heptagramm_einzeln.svg-947c70a635c98fa7815fa084c0681ab4.stex"
+path="res://.import/diving-helmet.svg-e158f2cf2268a66ed5ab8bdcf5a61fcc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/heptagramm_einzeln.svg"
-dest_files=[ "res://.import/heptagramm_einzeln.svg-947c70a635c98fa7815fa084c0681ab4.stex" ]
+source_file="res://assets/img/enemies/diving-helmet.svg"
+dest_files=[ "res://.import/diving-helmet.svg-e158f2cf2268a66ed5ab8bdcf5a61fcc.stex" ]
 
 [params]
 

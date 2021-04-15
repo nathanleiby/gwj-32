@@ -13,6 +13,9 @@ var size: Vector2 setget , get_size
 
 onready var main: Main = get_node_or_null("/root/Main")
 
+const BATTLE_SCENE = "res://scenes/gameplay/battle.tscn"
+const ZONE_SELECT_SCENE = "res://scenes/gameplay/ZoneSelect.tscn"
+
 
 func _ready():
 	if main == null:

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Mars_symbol.svg-ee70f34270a85796689bf8c1cd3bdbc5.stex"
+path="res://.import/Mercury_symbol.svg-569b66dbe3e7bacbe2286654035e5ff5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/Mars_symbol.svg"
-dest_files=[ "res://.import/Mars_symbol.svg-ee70f34270a85796689bf8c1cd3bdbc5.stex" ]
+source_file="res://assets/img/alchemy-symbols/Mercury_symbol.svg"
+dest_files=[ "res://.import/Mercury_symbol.svg-569b66dbe3e7bacbe2286654035e5ff5.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Jupiter_symbol.svg-3ff7a40e2d2dc3c9790c64380328bf4c.stex"
+path="res://.import/throne-king.svg-55db5c75d15c77ec88c7804888842148.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/Jupiter_symbol.svg"
-dest_files=[ "res://.import/Jupiter_symbol.svg-3ff7a40e2d2dc3c9790c64380328bf4c.stex" ]
+source_file="res://assets/img/enemies/throne-king.svg"
+dest_files=[ "res://.import/throne-king.svg-55db5c75d15c77ec88c7804888842148.stex" ]
 
 [params]
 

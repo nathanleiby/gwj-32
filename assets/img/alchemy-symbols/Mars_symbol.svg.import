@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Crescent.svg-5233a859a9e5851a3ccc3d66931234f0.stex"
+path="res://.import/Mars_symbol.svg-d9358e0a3390dd17686c4a33d54dc89b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/Crescent.svg"
-dest_files=[ "res://.import/Crescent.svg-5233a859a9e5851a3ccc3d66931234f0.stex" ]
+source_file="res://assets/img/alchemy-symbols/Mars_symbol.svg"
+dest_files=[ "res://.import/Mars_symbol.svg-d9358e0a3390dd17686c4a33d54dc89b.stex" ]
 
 [params]
 

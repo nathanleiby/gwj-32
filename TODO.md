@@ -2,10 +2,16 @@
 
 ## Now
 
-- select levels and fight person from that level
+
+- make battle easier to understand
+  - show enemy image
+  - health bar for self and enemy
+  - armor gauge for self and enemy
+  - show summarized damage in big #
 
 ## Actionable
 
+- select levels and fight person from that level
 - make the enemy also backed by a queue
 - show the enemy's queue
 - show cost to trash a card
@@ -15,7 +21,7 @@
 
 - (maybe) alternate player and enemy actions, for clarity on order of operations
 - add ability to heal (bought at shop)
-- Fix non-ideal UX:  remove need for "refresh" button in econ screen
+- Fix non-ideal UX:  remove need for "rewreefresh" button in econ screen
 - abstract out lots of key params into a consts / globals files
 - event bus, signals
 - think through core game state (Player properties, current level, score, etc)

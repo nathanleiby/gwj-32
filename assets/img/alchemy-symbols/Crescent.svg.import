@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Venus_symbol.svg-0603bcea617603e0812c6960e2ed6094.stex"
+path="res://.import/Crescent.svg-6d792846982e852eee3574a403a81698.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/Venus_symbol.svg"
-dest_files=[ "res://.import/Venus_symbol.svg-0603bcea617603e0812c6960e2ed6094.stex" ]
+source_file="res://assets/img/alchemy-symbols/Crescent.svg"
+dest_files=[ "res://.import/Crescent.svg-6d792846982e852eee3574a403a81698.stex" ]
 
 [params]
 

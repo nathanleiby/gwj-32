@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Saturn_symbol.svg-90aeb808aea98b1ae8e633275929cdb8.stex"
+path="res://.import/chained-heart.svg-2334d617931902d98a3589d3e10340d1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/Saturn_symbol.svg"
-dest_files=[ "res://.import/Saturn_symbol.svg-90aeb808aea98b1ae8e633275929cdb8.stex" ]
+source_file="res://assets/img/enemies/chained-heart.svg"
+dest_files=[ "res://.import/chained-heart.svg-2334d617931902d98a3589d3e10340d1.stex" ]
 
 [params]
 

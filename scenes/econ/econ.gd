@@ -67,7 +67,7 @@ func _on_BuyDeckSizeButton_pressed():
 
 
 func _on_ContinueButton_pressed():
-	Game.change_scene("res://scenes/gameplay/gameplay.tscn")
+	Game.change_scene(Game.BATTLE_SCENE)
 
 
 func setupShopCards():
