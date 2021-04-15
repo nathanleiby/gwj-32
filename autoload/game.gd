@@ -71,5 +71,6 @@ const ZONE_TO_ENEMY = {
 	'mercury': "Magus of Mercury",
 	'silver': 'Silver Sailor',
 	'lead': 'Leaden Lord',
-	'gold': 'Golden Ghost'
+	'gold': 'Golden Ghost',
+	'alchemist': 'The Alchemist',
 }

@@ -38,15 +38,17 @@ func pre_start(params):
 	opponentHp = 10 * Game.LEVELS_PER_ZONE * Game.zones_complete + Game.level
 	opponentAttack = int(floor(Game.LEVELS_PER_ZONE * Game.zones_complete + Game.level))
 
-	# TODO: Add Alchemist levels
-	# if Game.level == 8:
-	# 	# final level edge case alchemist
-	# 	opponentHp = 250
-	# 	opponentAttack = 25
-	# if Game.level == 9:
-	# 	# final level edge case alchemist, phase 2
-	# 	opponentHp = 400
-	# 	opponentAttack = 40
+	if Game.zone == 'alchemist':
+		# final level edge case alchemist
+		if Game.level == 1:
+			opponentHp = 250
+			opponentAttack = 25
+		elif Game.level == 2:
+			opponentHp = 400
+			opponentAttack = 40
+		elif Game.level == 3:
+			opponentHp = 600
+			opponentAttack = 60
 
 	deck = Player.deck.duplicate()
 	shuffle_deck()

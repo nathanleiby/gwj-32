@@ -232,7 +232,7 @@ __meta__ = {
 position = Vector2( 71.283, 39.9501 )
 texture = ExtResource( 10 )
 
-[node name="Alchemy" type="Panel" parent="Panel/Container"]
+[node name="Alchemist" type="Panel" parent="Panel/Container"]
 margin_left = 342.53
 margin_top = 118.49
 margin_right = 482.53
@@ -242,18 +242,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="Panel/Container/Alchemy"]
+[node name="Button" type="Button" parent="Panel/Container/Alchemist"]
 margin_left = 30.5565
 margin_top = 71.8471
 margin_right = 110.557
 margin_bottom = 91.8471
-disabled = true
+rect_rotation = 0.151834
 text = "Alchemist"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Image" type="Sprite" parent="Panel/Container/Alchemy"]
+[node name="Image" type="Sprite" parent="Panel/Container/Alchemist"]
 position = Vector2( 71.283, 39.0591 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 6 )
@@ -264,4 +264,4 @@ texture = ExtResource( 6 )
 [connection signal="pressed" from="Panel/Container/Gold/Button" to="." method="_on_Button_pressed" binds= [ "gold" ]]
 [connection signal="pressed" from="Panel/Container/Iron/Button" to="." method="_on_Button_pressed" binds= [ "iron" ]]
 [connection signal="pressed" from="Panel/Container/Tin/Button" to="." method="_on_Button_pressed" binds= [ "tin" ]]
-[connection signal="pressed" from="Panel/Container/Alchemy/Button" to="." method="_on_Button_pressed" binds= [ "alchemist" ]]
+[connection signal="pressed" from="Panel/Container/Alchemist/Button" to="." method="_on_Button_pressed" binds= [ "alchemist" ]]
