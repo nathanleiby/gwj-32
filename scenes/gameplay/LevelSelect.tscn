@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://resources/fonts/normal.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/img/Crescent.svg" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://assets/img/Venus_symbol.svg" type="Texture" id=8]
 [ext_resource path="res://assets/img/heptagramm_einzeln.svg" type="Texture" id=9]
 [ext_resource path="res://assets/img/Squaredcircle.svg" type="Texture" id=10]
+[ext_resource path="res://scenes/gameplay/LevelSelect.gd" type="Script" id=11]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 1, 1, 1, 1 )
@@ -39,6 +40,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -0.749176
 margin_bottom = -0.749146
+script = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -255,3 +257,11 @@ __meta__ = {
 position = Vector2( 71.283, 39.0591 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 10 )
+[connection signal="pressed" from="Panel/Container/Silver/Button" to="." method="_on_Button_pressed" binds= [ "silver" ]]
+[connection signal="pressed" from="Panel/Container/Lead/Button" to="." method="_on_Button_pressed" binds= [ "lead" ]]
+[connection signal="pressed" from="Panel/Container/Copper/Button" to="." method="_on_Button_pressed" binds= [ "copper" ]]
+[connection signal="pressed" from="Panel/Container/Mercury/Button" to="." method="_on_Button_pressed" binds= [ "mercury" ]]
+[connection signal="pressed" from="Panel/Container/Gold/Button" to="." method="_on_Button_pressed" binds= [ "gold" ]]
+[connection signal="pressed" from="Panel/Container/Iron/Button" to="." method="_on_Button_pressed" binds= [ "iron" ]]
+[connection signal="pressed" from="Panel/Container/Tin/Button" to="." method="_on_Button_pressed" binds= [ "tin" ]]
+[connection signal="pressed" from="Panel/Container/Alchemy/Button" to="." method="_on_Button_pressed" binds= [ "alchemist" ]]
