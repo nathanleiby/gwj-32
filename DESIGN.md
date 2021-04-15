@@ -85,4 +85,9 @@ IDEATION
 
 - consider alternating ticks with the enemy, so you can see the back and forth more clearly
 
-- give the enemy a deck/queue, so it's clear what they're doing
+- give the enemy a deck, so it's clear what they're doing
+
+- add a difficulty multiplier as you progress through ZONE (Gold, Iron, etc).
+  - e.g. 1st: 1.0, 2nd: 1.5, 3rd: 2.0, etc...
+  - Needs lots of tuning but the idea is that you can choose any order (or perhaps optimize the order!)
+  - the aspect you receive from each will affect ease, too..

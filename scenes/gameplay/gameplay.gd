@@ -34,6 +34,8 @@ func pre_start(params):
 		var val = params[key]
 		printt("", key, val)
 
+	Game.zone = params['zone']
+
 	# TODO: Do we need to hide placeholder text?
 	$GameStats.text = ""
 	$PlayerBoard/Deck.text = ""

@@ -7,6 +7,7 @@ extends Node
 
 # Progress through game
 var level: int = 1
+var zone = ""
 
 var size: Vector2 setget , get_size
 

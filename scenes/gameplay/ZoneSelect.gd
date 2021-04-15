@@ -10,8 +10,8 @@ extends Control
 #     print(extra_arg_0)
 
 
-func _on_Button_pressed(level):
+func _on_Button_pressed(zone):
 	var params = {
-		'level': level,
+		'zone': zone,
 	}
 	Game.change_scene("res://scenes/gameplay/gameplay.tscn", params)

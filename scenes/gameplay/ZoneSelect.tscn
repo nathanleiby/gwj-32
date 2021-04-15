@@ -1,29 +1,29 @@
 [gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://resources/fonts/normal.tres" type="DynamicFont" id=1]
-[ext_resource path="res://assets/img/Crescent.svg" type="Texture" id=2]
-[ext_resource path="res://assets/img/Sun_symbol.svg" type="Texture" id=3]
+[ext_resource path="res://assets/img/heptagramm_einzeln.svg" type="Texture" id=2]
+[ext_resource path="res://scenes/gameplay/ZoneSelect.gd" type="Script" id=3]
 [ext_resource path="res://assets/img/Mars_symbol.svg" type="Texture" id=4]
 [ext_resource path="res://assets/img/Mercury_symbol.svg" type="Texture" id=5]
-[ext_resource path="res://assets/img/Saturn_symbol.svg" type="Texture" id=6]
-[ext_resource path="res://assets/img/Jupiter_symbol.svg" type="Texture" id=7]
-[ext_resource path="res://assets/img/Venus_symbol.svg" type="Texture" id=8]
-[ext_resource path="res://assets/img/heptagramm_einzeln.svg" type="Texture" id=9]
-[ext_resource path="res://assets/img/Squaredcircle.svg" type="Texture" id=10]
-[ext_resource path="res://scenes/gameplay/LevelSelect.gd" type="Script" id=11]
+[ext_resource path="res://assets/img/Squaredcircle.svg" type="Texture" id=6]
+[ext_resource path="res://assets/img/Crescent.svg" type="Texture" id=7]
+[ext_resource path="res://assets/img/Saturn_symbol.svg" type="Texture" id=8]
+[ext_resource path="res://assets/img/Sun_symbol.svg" type="Texture" id=9]
+[ext_resource path="res://assets/img/Jupiter_symbol.svg" type="Texture" id=10]
+[ext_resource path="res://assets/img/Venus_symbol.svg" type="Texture" id=11]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 1, 1, 1, 1 )
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=2]
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.121569, 0.737255, 0.0352941, 1 )
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.376471, 0.176471, 0.00392157, 1 )
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.811765, 0.72549, 0.0235294, 1 )
 
 [sub_resource type="StyleBoxFlat" id=6]
@@ -40,7 +40,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -0.749176
 margin_bottom = -0.749146
-script = ExtResource( 11 )
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -66,7 +66,7 @@ __meta__ = {
 [node name="heptagramm_einzeln" type="Sprite" parent="Panel"]
 position = Vector2( 512, 320 )
 scale = Vector2( 0.6, 0.6 )
-texture = ExtResource( 9 )
+texture = ExtResource( 2 )
 
 [node name="Container" type="Node2D" parent="Panel"]
 position = Vector2( 105.126, 147.889 )
@@ -94,14 +94,14 @@ __meta__ = {
 [node name="Image" type="Sprite" parent="Panel/Container/Silver"]
 position = Vector2( 70.8915, 35.302 )
 scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 2 )
+texture = ExtResource( 7 )
 
 [node name="Lead" type="Panel" parent="Panel/Container"]
 margin_left = 116.036
 margin_top = 275.726
 margin_right = 256.036
 margin_bottom = 375.726
-custom_styles/panel = SubResource( 3 )
+custom_styles/panel = SubResource( 2 )
 
 [node name="Button" type="Button" parent="Panel/Container/Lead"]
 margin_left = 31.0672
@@ -115,14 +115,14 @@ __meta__ = {
 
 [node name="Image" type="Sprite" parent="Panel/Container/Lead"]
 position = Vector2( 68.644, 36.0511 )
-texture = ExtResource( 6 )
+texture = ExtResource( 8 )
 
 [node name="Copper" type="Panel" parent="Panel/Container"]
 margin_left = 345.436
 margin_top = 349.671
 margin_right = 485.436
 margin_bottom = 449.671
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = SubResource( 3 )
 
 [node name="Button" type="Button" parent="Panel/Container/Copper"]
 margin_left = 31.0672
@@ -137,14 +137,14 @@ __meta__ = {
 [node name="Image" type="Sprite" parent="Panel/Container/Copper"]
 position = Vector2( 67.8949, 36.0511 )
 scale = Vector2( 0.66, 0.66 )
-texture = ExtResource( 8 )
+texture = ExtResource( 11 )
 
 [node name="Mercury" type="Panel" parent="Panel/Container"]
 margin_left = 558.799
 margin_top = 276.617
 margin_right = 698.799
 margin_bottom = 376.617
-custom_styles/panel = SubResource( 5 )
+custom_styles/panel = SubResource( 4 )
 
 [node name="Button" type="Button" parent="Panel/Container/Mercury"]
 margin_left = 29.569
@@ -165,7 +165,7 @@ margin_left = 240.09
 margin_top = -100.672
 margin_right = 380.09
 margin_bottom = -0.671547
-custom_styles/panel = SubResource( 2 )
+custom_styles/panel = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -182,7 +182,7 @@ __meta__ = {
 
 [node name="Image" type="Sprite" parent="Panel/Container/Gold"]
 position = Vector2( 71.283, 39.9501 )
-texture = ExtResource( 3 )
+texture = ExtResource( 9 )
 
 [node name="Iron" type="Panel" parent="Panel/Container"]
 margin_left = 457.018
@@ -230,7 +230,7 @@ __meta__ = {
 
 [node name="Image" type="Sprite" parent="Panel/Container/Tin"]
 position = Vector2( 71.283, 39.9501 )
-texture = ExtResource( 7 )
+texture = ExtResource( 10 )
 
 [node name="Alchemy" type="Panel" parent="Panel/Container"]
 margin_left = 342.53
@@ -256,7 +256,7 @@ __meta__ = {
 [node name="Image" type="Sprite" parent="Panel/Container/Alchemy"]
 position = Vector2( 71.283, 39.0591 )
 scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 10 )
+texture = ExtResource( 6 )
 [connection signal="pressed" from="Panel/Container/Silver/Button" to="." method="_on_Button_pressed" binds= [ "silver" ]]
 [connection signal="pressed" from="Panel/Container/Lead/Button" to="." method="_on_Button_pressed" binds= [ "lead" ]]
 [connection signal="pressed" from="Panel/Container/Copper/Button" to="." method="_on_Button_pressed" binds= [ "copper" ]]
