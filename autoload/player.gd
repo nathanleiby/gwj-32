@@ -28,8 +28,8 @@ var money: int = 5
 
 ## Deck
 var maxDeckSize: int = 10
-# onready var deck: Array = startingDeck
-onready var deck: Array = debugDeck  # testing123..
+onready var deck: Array = startingDeck
+# onready var deck: Array = debugDeck  # testing123..
 
 ## Queue
 var queueSize: int = 3
