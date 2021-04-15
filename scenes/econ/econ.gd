@@ -13,6 +13,8 @@ const DECKCARDS_PER_ROW = 7
 # TODO: Move these to a central place, where I can tweak game design params
 const QUEUE_SIZE_COST = 10
 const DECK_SIZE_COST = 5
+const HEALING_COST = 5
+const HEALING_HP_AMOUNT = 10
 
 var forSale = []
 
@@ -66,6 +68,18 @@ func _on_BuyDeckSizeButton_pressed():
 	setupPlayerHUD()
 
 
+func _on_BuyHealingButton_pressed():
+	# can't buy it
+	if Player.money < HEALING_COST || Player.currentHP == Player.maxHP:
+		return false
+
+	# update player
+	Player.money -= HEALING_COST
+	Player.currentHP += HEALING_HP_AMOUNT
+	Player.currentHP = int(clamp(Player.currentHP, 0, Player.maxHP))
+	setupPlayerHUD()
+
+
 func _on_ContinueButton_pressed():
 	Game.change_scene(Game.BATTLE_SCENE)
 
@@ -82,6 +96,7 @@ func setupShopCards():
 
 	$Shop/BuyDeckSizeButton.text = "+1 Deck Size (" + str(DECK_SIZE_COST) + " gp)"
 	$Shop/BuyQueueSizeButton.text = "+1 Queue Size (" + str(QUEUE_SIZE_COST) + " gp)"
+	$Shop/BuyHealingButton.text = "Heal %s HP (%s gp)" % [HEALING_HP_AMOUNT, HEALING_COST]
 
 
 func setupDeck():

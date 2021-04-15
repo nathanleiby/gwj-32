@@ -37,21 +37,28 @@ __meta__ = {
 }
 
 [node name="BuyQueueSizeButton" type="Button" parent="Shop"]
-margin_left = 23.095
-margin_top = 180.309
-margin_right = 223.095
-margin_bottom = 223.309
+margin_left = 25.0
+margin_top = 180.0
+margin_right = 225.0
+margin_bottom = 223.0
 text = "+1 Queue Size"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="BuyDeckSizeButton" type="Button" parent="Shop"]
-margin_left = 266.26
-margin_top = 180.309
-margin_right = 466.26
-margin_bottom = 223.309
+margin_left = 250.0
+margin_top = 180.0
+margin_right = 450.0
+margin_bottom = 223.0
 text = "+1 Deck Size"
+
+[node name="BuyHealingButton" type="Button" parent="Shop"]
+margin_left = 475.0
+margin_top = 180.0
+margin_right = 675.0
+margin_bottom = 223.0
+text = "Heal 10 HP"
 
 [node name="Deck" type="Panel" parent="."]
 margin_left = 34.9603
@@ -154,5 +161,6 @@ __meta__ = {
 }
 [connection signal="pressed" from="Shop/BuyQueueSizeButton" to="." method="_on_BuyQueueSizeButton_pressed"]
 [connection signal="pressed" from="Shop/BuyDeckSizeButton" to="." method="_on_BuyDeckSizeButton_pressed"]
+[connection signal="pressed" from="Shop/BuyHealingButton" to="." method="_on_BuyHealingButton_pressed"]
 [connection signal="pressed" from="RefreshButton" to="." method="_on_RefreshButton_pressed"]
 [connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]

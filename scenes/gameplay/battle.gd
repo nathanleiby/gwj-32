@@ -35,8 +35,9 @@ func pre_start(params):
 		printt("", key, val)
 
 	# Setup game state
-	opponentHp = 10 * Game.LEVELS_PER_ZONE * Game.zones_complete + Game.level
-	opponentAttack = int(floor(Game.LEVELS_PER_ZONE * Game.zones_complete + Game.level))
+	var difficulty = Game.LEVELS_PER_ZONE * Game.zones_complete + Game.level
+	opponentHp = 10 * difficulty
+	opponentAttack = difficulty
 
 	if Game.zone == 'alchemist':
 		# final level edge case alchemist

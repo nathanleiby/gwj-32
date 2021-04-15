@@ -2,7 +2,7 @@
 
 ## Now
 
-- add ability to heal (bought at shop)
+- share it with `#gamedev` discord for feedback v1
 
 ## Actionable
 
@@ -11,7 +11,6 @@
 - automatically deploy latest build to itch  https://hub.docker.com/r/barichello/godot-ci , https://gitlab.com/barichello/godot-ci/
 - make battle easier to understand
   - show summarized damage in big #
-- share it with `#gamedev` discord for feedback v1
 
 ## Backlog
 
