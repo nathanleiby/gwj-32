@@ -32,7 +32,7 @@ margin_left = 9.0
 margin_top = 90.0
 margin_right = 96.0
 margin_bottom = 110.0
-text = "Trash"
+text = "Trash (5 gp)"
 __meta__ = {
 "_edit_use_anchors_": false
 }
