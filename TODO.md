@@ -2,7 +2,8 @@
 
 ## Now
 
-- add a "how to play" screen
+- Show damage dealt more clearly (e.g. show damage per card + summary of damage), same idea for armor / healing
+- select levels
 
 ## Actionable
 
@@ -11,7 +12,7 @@
 
 ## Backlog
 
-- Show damage dealt more clearly (e.g. show damage per card + summary of damage), same idea for armor / healing
+- add ability to heal (bought at shop)
 - Fix non-ideal UX:  remove need for "refresh" button in econ screen
 - abstract out lots of key params into a consts / globals files
 - event bus, signals
