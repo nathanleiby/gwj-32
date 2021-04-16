@@ -9,6 +9,7 @@
 - (BUG) if you lose (or win?), click "go to main menu", and start a new game.. it's borked. need to reset game state.
   - This makes restarting much smoother, so nice to improve!
 - automatically deploy latest build to itch  https://hub.docker.com/r/barichello/godot-ci , https://gitlab.com/barichello/godot-ci/
+  - https://github.com/marketplace/actions/godot-ci#itchio
 - make battle easier to understand
   - show summarized damage in big #
 

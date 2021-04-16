@@ -93,3 +93,38 @@ IDEATION
   - the aspect you receive from each will affect ease, too..
 
 - consider adding "strength" or "intensity" as a core stat, and it its a multiplier that affects cards.. would make "enemy strength" easier to understand
+
+Feedback
+
+- first battle flew by too fast
+- "refresh" doesn't work
+- understands econ.
+- clarify that trash COSTS 5gp vs gain 5gp
+- its freezes at the end of the battle
+- i understand now.. i build a deck, and then the deck is automatically played
+- consider an explicit "continue" button from battle, vs auto-fade out
+  - consider also: shop as overlay on top of battle
+- explain all cards
+- can only buy 1 at a time?
+- "not sure what this is" (defense/armor)
+- it looks like i'm done... where did my cards go?
+  - did i keep that deck? is it separate
+  - IDEA: allow going to "shop" from level select screen, too
+- he's seeing enemies with more health
+- HP in shop screen could use more clarity
+- Labeling the queue, explaining it more
+- showing 'locked' queue
+- NOT QUITE SURE how the opponent is interacting. do they have a queue?
+- it looks like "my turn happens simultaneously with other turn"
+  - consider alternating :D
+
+Autobattling:
+- Doesn't like that it's hard to tell what happened due to simultaneous resolution (his + enemy combined)
+  - visual way to play out your actions (e.g. resolve each card)
+  - also explain the enemies actions :D
+- jumping right into first battle was confusing
+- after final battle in a segment, there's NO SHOP. ay!
+
+QOL ideas:
+- have a way for player to see what's in their deck outside of combat
+  - deck view vs shop view?
