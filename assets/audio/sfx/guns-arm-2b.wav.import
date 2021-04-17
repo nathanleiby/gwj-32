@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/guns-arm-2b.wav-b22f531753ae6cae75e059b17c68e173.sample"
+
+[deps]
+
+source_file="res://assets/audio/sfx/guns-arm-2b.wav"
+dest_files=[ "res://.import/guns-arm-2b.wav-b22f531753ae6cae75e059b17c68e173.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

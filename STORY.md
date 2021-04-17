@@ -32,3 +32,9 @@ possible rogue-like frame: You *already drank* the elixir of life, you just didn
 
 - colors associated with planets: http://cura.free.fr/22plcome.html
 - classical planets: https://en.wikipedia.org/wiki/Planets_in_astrology
+
+## Final Battle / Alchemist
+
+what if the alcehmist keeps coming alive.. and between each round we say... he's eternal, has he drunk the elixir of life? can we truly kill him? but then when you kill him 3x he seems to heal to max and then heals OVER max, exploding in blood.
+
+you drink his blood as the elixir of life

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/qubodupPunch01.ogg-f39f4fc9dc1f55c3ceee19980ce64fb5.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/qubodupPunch/qubodupPunch01.ogg"
+dest_files=[ "res://.import/qubodupPunch01.ogg-f39f4fc9dc1f55c3ceee19980ce64fb5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

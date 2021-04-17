@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/audio/music/juhani-part1.wav" type="AudioStream" id=1]
+[ext_resource path="res://assets/audio/music/juhani-part2.wav" type="AudioStream" id=2]
+[ext_resource path="res://scenes/audio/music.gd" type="Script" id=3]
+[ext_resource path="res://assets/audio/music/Caves of sorrow.ogg" type="AudioStream" id=4]
+
+[node name="Music" type="Node"]
+pause_mode = 2
+script = ExtResource( 3 )
+
+[node name="Ambient" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
+
+[node name="RegularMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -80.0
+
+[node name="BattleMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -80.0
+
+[node name="Tween1" type="Tween" parent="."]
+
+[node name="Tween2" type="Tween" parent="."]

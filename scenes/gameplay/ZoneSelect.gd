@@ -25,4 +25,9 @@ func pre_start(params):
 
 func _on_Button_pressed(zone):
 	Game.zone = zone
+	# Music.switchMusic(Music.Songs.Battle)
 	Game.change_scene(Game.BATTLE_SCENE)
+
+
+func _on_ShopButton_pressed():
+	Game.change_scene(Game.ECON_SCENE, {"from": Game.ZONE_SELECT_SCENE})

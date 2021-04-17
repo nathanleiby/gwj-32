@@ -42,6 +42,7 @@ config/icon="res://assets/sprites/icon.png"
 
 Game="*res://autoload/game.gd"
 Player="*res://autoload/player.gd"
+Music="*res://scenes/audio/music.tscn"
 
 [display]
 

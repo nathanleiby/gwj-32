@@ -68,6 +68,23 @@ position = Vector2( 512, 320 )
 scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 2 )
 
+[node name="Control" type="Container" parent="Panel"]
+margin_left = 961.0
+margin_top = 13.0
+margin_right = 1023.0
+margin_bottom = 53.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ShopButton" type="Button" parent="Panel/Control"]
+margin_right = 12.0
+margin_bottom = 20.0
+text = "Shop"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Container" type="Node2D" parent="Panel"]
 position = Vector2( 105.126, 147.889 )
 
@@ -257,6 +274,7 @@ __meta__ = {
 position = Vector2( 71.283, 39.0591 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 6 )
+[connection signal="pressed" from="Panel/Control/ShopButton" to="." method="_on_ShopButton_pressed"]
 [connection signal="pressed" from="Panel/Container/Silver/Button" to="." method="_on_Button_pressed" binds= [ "silver" ]]
 [connection signal="pressed" from="Panel/Container/Lead/Button" to="." method="_on_Button_pressed" binds= [ "lead" ]]
 [connection signal="pressed" from="Panel/Container/Copper/Button" to="." method="_on_Button_pressed" binds= [ "copper" ]]

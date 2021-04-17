@@ -128,3 +128,28 @@ Autobattling:
 QOL ideas:
 - have a way for player to see what's in their deck outside of combat
   - deck view vs shop view?
+
+## Playing cards as inspiration?
+For usability, what about cards as base model. e.g. instead of "Attack 1", it could instead be a "1 of swords" (playing card, change icon to a sword) to indicate it does 1 damage.
+
+https://game-icons.net/tags/board.html
+
+For the Q to work with this, maybe it just can activate again all the cards in your queue of that type.
+So by default each sword card activates 1x, but if you play a Q of swords they'll trigger 2x. Hence it's a balancing act between damage cards and multiplier (Q) cards.
+
+## Aspect Powers
+
+- mercury: draw +1 card per turn
+- lead: start with your queue half filled (rounded up)
+- iron: all attacks do +1 damage
+- tin: all defend does +1 shield
+- copper: heal 5 damage at the end of each round
+- gold: gain +1 gold per encounter
+- silver: max deck size +4
+  - without this aspect capped at X cards (10?)
+- start battle with X armor
+- trash 3 cards for free
+  - perhas harder to implement 1 off "event" vs passive power
+
+## Fusing / Upgrading
+- allow fusing three of same cards to get the card but leveled up +1

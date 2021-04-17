@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/punch_alt-2a.wav-9eefad39c3a1ac38b60f50b6c874816a.sample"
+
+[deps]
+
+source_file="res://assets/audio/sfx/punch_alt-2a.wav"
+dest_files=[ "res://.import/punch_alt-2a.wav-9eefad39c3a1ac38b60f50b6c874816a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

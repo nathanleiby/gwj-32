@@ -17,10 +17,14 @@ const HEALING_COST = 5
 const HEALING_HP_AMOUNT = 10
 
 var forSale = []
+var nextScene = Game.BATTLE_SCENE
 
 
-func _init():
-	print("econ.gd _init()")
+func pre_start(params):
+	if params.has("from"):
+		nextScene = params["from"]
+	else:
+		nextScene = Game.BATTLE_SCENE
 
 
 func _ready():
@@ -81,7 +85,7 @@ func _on_BuyHealingButton_pressed():
 
 
 func _on_ContinueButton_pressed():
-	Game.change_scene(Game.BATTLE_SCENE)
+	Game.change_scene(nextScene)
 
 
 func setupShopCards():

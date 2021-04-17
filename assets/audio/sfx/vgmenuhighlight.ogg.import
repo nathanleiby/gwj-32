@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/vgmenuhighlight.ogg-fa1d4aa5bfa1488cad133c8899877643.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/sfx/vgmenuhighlight.ogg"
+dest_files=[ "res://.import/vgmenuhighlight.ogg-fa1d4aa5bfa1488cad133c8899877643.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
