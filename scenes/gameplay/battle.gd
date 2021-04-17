@@ -114,7 +114,7 @@ func _next_tick():
 				Game.level = 1
 				Game.zones_complete += 1
 				Music.switchMusic(Music.Songs.Regular)
-				Game.change_scene(Game.ZONE_SELECT_SCENE)
+				Game.change_scene(Game.ZONE_VICTORY_SCENE)
 		else:
 			Game.change_scene(Game.ECON_SCENE)
 

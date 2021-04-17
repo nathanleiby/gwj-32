@@ -16,6 +16,7 @@ onready var main: Main = get_node_or_null("/root/Main")
 
 const BATTLE_SCENE = "res://scenes/gameplay/battle.tscn"
 const ZONE_SELECT_SCENE = "res://scenes/gameplay/ZoneSelect.tscn"
+const ZONE_VICTORY_SCENE = "res://scenes/gameplay/ZoneVictory.tscn"
 const ECON_SCENE = "res://scenes/econ/econ.tscn"
 const VICTORY_SCENE = "res://scenes/gameover/victory.tscn"
 const DEFEAT_SCENE = "res://scenes/gameover/defeat.tscn"
@@ -73,4 +74,34 @@ const ZONE_TO_ENEMY = {
 	'lead': 'Leaden Lord',
 	'gold': 'Golden Ghost',
 	'alchemist': 'The Alchemist',
+}
+
+const IRON_ATTACK_BONUS = 1
+const TIN_ARMOR_BONUS = 1
+const COPPER_HEAL_BONUS = 5
+const MERCURY_DRAW_BONUS = 1
+const SILVER_DECK_SIZE_BONUS = 3
+const GOLD_GOLD_BONUS = 1
+
+const ZONE_TO_BONUS = {
+	'tin': 'Defend cards give +%s armor' % TIN_ARMOR_BONUS,
+	'copper': 'Heal %s HP at the end of each battle' % COPPER_HEAL_BONUS,
+	'iron': 'Attack cards do +%s damage' % IRON_ATTACK_BONUS,
+	'mercury': "Draw +%s card per turn" % MERCURY_DRAW_BONUS,
+	'silver': 'Max deck size +%s' % SILVER_DECK_SIZE_BONUS,
+	'lead': 'Start battle with your queue half full (rounded up)',
+	'gold': 'Gain +%s gold per enounter' % GOLD_GOLD_BONUS,
+	'alchemist': '',
+}
+
+# preview of web colors available here: https://www.w3schools.com/colors/colors_names.asp
+const ZONE_TO_COLOR = {
+	'copper': Color.lawngreen,
+	'iron': Color.darkred,
+	'mercury': Color.saddlebrown,
+	'silver': Color.silver,
+	'lead': Color.lightgray,
+	'gold': Color.gold,
+	'tin': Color.darkorange,
+	'alchemist': Color.purple,
 }

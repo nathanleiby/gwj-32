@@ -1,38 +1,35 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://resources/fonts/normal.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/img/alchemy-symbols/heptagramm_einzeln.svg" type="Texture" id=2]
 [ext_resource path="res://scenes/gameplay/ZoneSelect.gd" type="Script" id=3]
 [ext_resource path="res://assets/img/alchemy-symbols/iron.svg" type="Texture" id=4]
 [ext_resource path="res://assets/img/alchemy-symbols/mercury.svg" type="Texture" id=5]
-[ext_resource path="res://assets/img/alchemy-symbols/Squaredcircle.svg" type="Texture" id=6]
-[ext_resource path="res://assets/img/alchemy-symbols/Crescent.svg" type="Texture" id=7]
+[ext_resource path="res://assets/img/alchemy-symbols/alchemist.svg" type="Texture" id=6]
+[ext_resource path="res://scenes/common/Aspect.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/img/alchemy-symbols/lead.svg" type="Texture" id=8]
 [ext_resource path="res://assets/img/alchemy-symbols/gold.svg" type="Texture" id=9]
-[ext_resource path="res://assets/img/alchemy-symbols/Jupiter_symbol.svg" type="Texture" id=10]
-[ext_resource path="res://assets/img/alchemy-symbols/Venus_symbol.svg" type="Texture" id=11]
+[ext_resource path="res://assets/img/alchemy-symbols/tin.svg" type="Texture" id=10]
+[ext_resource path="res://assets/img/alchemy-symbols/copper.svg" type="Texture" id=11]
 
 [sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 1, 1, 1, 1 )
 
 [sub_resource type="StyleBoxFlat" id=2]
-
-[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.121569, 0.737255, 0.0352941, 1 )
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.376471, 0.176471, 0.00392157, 1 )
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.811765, 0.72549, 0.0235294, 1 )
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.654902, 0.0196078, 0.0196078, 1 )
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.929412, 0.545098, 0.00392157, 1 )
 
-[sub_resource type="StyleBoxFlat" id=8]
+[sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.25, 0, 0.25, 1 )
 
 [node name="Control" type="Control"]
@@ -88,37 +85,18 @@ __meta__ = {
 [node name="Container" type="Node2D" parent="Panel"]
 position = Vector2( 105.126, 147.889 )
 
-[node name="Silver" type="Panel" parent="Panel/Container"]
-margin_left = 94.4353
-margin_top = 66.8174
-margin_right = 234.435
-margin_bottom = 166.817
-custom_styles/panel = SubResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button" type="Button" parent="Panel/Container/Silver"]
-margin_left = 31.8164
-margin_top = 73.5208
-margin_right = 111.816
-margin_bottom = 93.5208
-text = "Silver"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Image" type="Sprite" parent="Panel/Container/Silver"]
-position = Vector2( 70.8915, 35.302 )
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 7 )
+[node name="Silver" parent="Panel/Container" instance=ExtResource( 7 )]
+margin_left = 83.2445
+margin_top = 65.4064
+margin_right = 227.245
+margin_bottom = 161.406
 
 [node name="Lead" type="Panel" parent="Panel/Container"]
 margin_left = 116.036
 margin_top = 275.726
 margin_right = 256.036
 margin_bottom = 375.726
-custom_styles/panel = SubResource( 2 )
+custom_styles/panel = SubResource( 1 )
 
 [node name="Button" type="Button" parent="Panel/Container/Lead"]
 margin_left = 31.0672
@@ -139,7 +117,10 @@ margin_left = 345.436
 margin_top = 349.671
 margin_right = 485.436
 margin_bottom = 449.671
-custom_styles/panel = SubResource( 3 )
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button" type="Button" parent="Panel/Container/Copper"]
 margin_left = 31.0672
@@ -161,7 +142,7 @@ margin_left = 558.799
 margin_top = 276.617
 margin_right = 698.799
 margin_bottom = 376.617
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = SubResource( 3 )
 
 [node name="Button" type="Button" parent="Panel/Container/Mercury"]
 margin_left = 29.569
@@ -182,7 +163,7 @@ margin_left = 240.09
 margin_top = -100.672
 margin_right = 380.09
 margin_bottom = -0.671547
-custom_styles/panel = SubResource( 5 )
+custom_styles/panel = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -206,7 +187,7 @@ margin_left = 457.018
 margin_top = -100.672
 margin_right = 597.018
 margin_bottom = -0.671547
-custom_styles/panel = SubResource( 6 )
+custom_styles/panel = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -230,7 +211,7 @@ margin_left = 600.891
 margin_top = 70.381
 margin_right = 740.891
 margin_bottom = 170.381
-custom_styles/panel = SubResource( 7 )
+custom_styles/panel = SubResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -254,7 +235,7 @@ margin_left = 342.53
 margin_top = 118.49
 margin_right = 482.53
 margin_bottom = 218.49
-custom_styles/panel = SubResource( 8 )
+custom_styles/panel = SubResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -275,7 +256,6 @@ position = Vector2( 71.283, 39.0591 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 6 )
 [connection signal="pressed" from="Panel/Control/ShopButton" to="." method="_on_ShopButton_pressed"]
-[connection signal="pressed" from="Panel/Container/Silver/Button" to="." method="_on_Button_pressed" binds= [ "silver" ]]
 [connection signal="pressed" from="Panel/Container/Lead/Button" to="." method="_on_Button_pressed" binds= [ "lead" ]]
 [connection signal="pressed" from="Panel/Container/Copper/Button" to="." method="_on_Button_pressed" binds= [ "copper" ]]
 [connection signal="pressed" from="Panel/Container/Mercury/Button" to="." method="_on_Button_pressed" binds= [ "mercury" ]]

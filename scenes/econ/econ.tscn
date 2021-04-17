@@ -89,22 +89,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="RefreshInfo" type="Label" parent="."]
+margin_left = 838.811
+margin_top = 77.0
+margin_right = 1003.81
+margin_bottom = 108.0
+text = "hacky UI,
+refresh if needed"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="RefreshButton" type="Button" parent="."]
-margin_left = 873.513
-margin_top = 80.4881
-margin_right = 964.513
-margin_bottom = 100.488
+margin_left = 838.324
+margin_top = 109.056
+margin_right = 929.324
+margin_bottom = 129.056
 text = "Refresh"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ContinueButton" type="Button" parent="."]
-margin_left = 874.0
-margin_top = 109.0
-margin_right = 965.0
-margin_bottom = 129.0
-text = "Next Battle"
+margin_left = 838.324
+margin_top = 161.325
+margin_right = 929.324
+margin_bottom = 181.325
+text = "Onward!"
 __meta__ = {
 "_edit_use_anchors_": false
 }

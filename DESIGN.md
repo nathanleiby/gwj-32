@@ -140,16 +140,57 @@ So by default each sword card activates 1x, but if you play a Q of swords they'l
 ## Aspect Powers
 
 - mercury: draw +1 card per turn
+  - how does this help?
+  - "1000 tiny cuts" .. do 1 damage per card drawn?
 - lead: start with your queue half filled (rounded up)
 - iron: all attacks do +1 damage
 - tin: all defend does +1 shield
-- copper: heal 5 damage at the end of each round
+- copper: heal 5 at end of battle
+  - variant.. heal 10% health whenever you shuffle the deck
 - gold: gain +1 gold per encounter
+  - enemies have better than average cards, since they're rich?
 - silver: max deck size +4
   - without this aspect capped at X cards (10?)
+  - queue size +X?
+  - enemies hard large queue and large  deck?
 - start battle with X armor
 - trash 3 cards for free
   - perhas harder to implement 1 off "event" vs passive power
 
+IDEA: enemies in that zone should have the apsect
+
 ## Fusing / Upgrading
 - allow fusing three of same cards to get the card but leveled up +1
+- what if there were a "A" (alchemy) card, that fused two cards?
+
+
+## Economy
+
+"You'd rather buy than upgrade"
+
+Pay 2x deck card's value to upgrade it.
+Pay a shop card's face value to buy it.
+
+"Cleaning up your deck is possible, but costly"
+
+cost to trash goes up 5gp per card
+(or: Cost to trash is 5gp * current zone)
+
+"Q card is priced appropriately"
+
+1/50 drop chance in shop.
+
+"Card drops are randomized, but always decently good"
+
+minimum card value is the current zone.
+range of card values is up to (current zone + 3)
+i.e. it starts with 1-3 and by the end is 7-9
+
+
+50% chance of current level (L)
+30% chance of next level (L+1)
+15% chance of next level (L+1)
+5% chance of Q card
+
+"You can pay to re-roll the shop, lessening impact of RNG"
+

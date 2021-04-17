@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Squaredcircle.svg-f07927b11f78830ebc98fb3514bd0c2c.stex"
+path="res://.import/copper.svg-7215b1d1a02b7f76d0f9862153847d05.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/img/alchemy-symbols/Squaredcircle.svg"
-dest_files=[ "res://.import/Squaredcircle.svg-f07927b11f78830ebc98fb3514bd0c2c.stex" ]
+source_file="res://assets/img/alchemy-symbols/copper.svg"
+dest_files=[ "res://.import/copper.svg-7215b1d1a02b7f76d0f9862153847d05.stex" ]
 
 [params]
 

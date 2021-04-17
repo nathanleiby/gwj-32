@@ -1,5 +1,11 @@
 # Design Log
 
+## April 16
+
+- 8pm: dying in Zone 3.. gets hard too fast
+  - haven't yet made the aspects give you any power, so that could help turn tide
+  - earning aspects feels good!
+
 ## April 15
 
 - 4pm: allow fighting the alchemist right off the bat.. see what you're aiming for!
