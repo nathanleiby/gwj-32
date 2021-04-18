@@ -1,36 +1,9 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://resources/fonts/normal.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/img/alchemy-symbols/heptagramm_einzeln.svg" type="Texture" id=2]
 [ext_resource path="res://scenes/gameplay/ZoneSelect.gd" type="Script" id=3]
-[ext_resource path="res://assets/img/alchemy-symbols/iron.svg" type="Texture" id=4]
-[ext_resource path="res://assets/img/alchemy-symbols/mercury.svg" type="Texture" id=5]
-[ext_resource path="res://assets/img/alchemy-symbols/alchemist.svg" type="Texture" id=6]
 [ext_resource path="res://scenes/common/Aspect.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets/img/alchemy-symbols/lead.svg" type="Texture" id=8]
-[ext_resource path="res://assets/img/alchemy-symbols/gold.svg" type="Texture" id=9]
-[ext_resource path="res://assets/img/alchemy-symbols/tin.svg" type="Texture" id=10]
-[ext_resource path="res://assets/img/alchemy-symbols/copper.svg" type="Texture" id=11]
-
-[sub_resource type="StyleBoxFlat" id=1]
-
-[sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0.121569, 0.737255, 0.0352941, 1 )
-
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.376471, 0.176471, 0.00392157, 1 )
-
-[sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0.811765, 0.72549, 0.0235294, 1 )
-
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.654902, 0.0196078, 0.0196078, 1 )
-
-[sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0.929412, 0.545098, 0.00392157, 1 )
-
-[sub_resource type="StyleBoxFlat" id=7]
-bg_color = Color( 0.25, 0, 0.25, 1 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -46,6 +19,7 @@ __meta__ = {
 margin_right = 1024.0
 margin_bottom = 600.0
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": false
 }
 
@@ -64,6 +38,9 @@ __meta__ = {
 position = Vector2( 512, 320 )
 scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Control" type="Container" parent="Panel"]
 margin_left = 961.0
@@ -83,183 +60,60 @@ __meta__ = {
 }
 
 [node name="Container" type="Node2D" parent="Panel"]
-position = Vector2( 105.126, 147.889 )
 
 [node name="Silver" parent="Panel/Container" instance=ExtResource( 7 )]
-margin_left = 83.2445
-margin_top = 65.4064
-margin_right = 227.245
-margin_bottom = 161.406
+margin_left = 192.0
+margin_top = 192.0
+margin_right = 336.0
+margin_bottom = 288.0
+aspectName = "silver"
 
-[node name="Lead" type="Panel" parent="Panel/Container"]
-margin_left = 116.036
-margin_top = 275.726
-margin_right = 256.036
-margin_bottom = 375.726
-custom_styles/panel = SubResource( 1 )
+[node name="Lead" parent="Panel/Container" instance=ExtResource( 7 )]
+margin_left = 208.0
+margin_top = 416.0
+margin_right = 352.0
+margin_bottom = 512.0
+aspectName = "lead"
 
-[node name="Button" type="Button" parent="Panel/Container/Lead"]
-margin_left = 31.0672
-margin_top = 72.7717
-margin_right = 111.067
-margin_bottom = 92.7717
-text = "Lead"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Tin" parent="Panel/Container" instance=ExtResource( 7 )]
+margin_left = 688.0
+margin_top = 192.0
+margin_right = 832.0
+margin_bottom = 288.0
+aspectName = "tin"
 
-[node name="Image" type="Sprite" parent="Panel/Container/Lead"]
-position = Vector2( 68.644, 36.0511 )
-texture = ExtResource( 8 )
+[node name="Mercury" parent="Panel/Container" instance=ExtResource( 7 )]
+margin_left = 672.0
+margin_top = 416.0
+margin_right = 816.0
+margin_bottom = 512.0
+aspectName = "mercury"
 
-[node name="Copper" type="Panel" parent="Panel/Container"]
-margin_left = 345.436
-margin_top = 349.671
-margin_right = 485.436
-margin_bottom = 449.671
-custom_styles/panel = SubResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Copper" parent="Panel/Container" instance=ExtResource( 7 )]
+margin_left = 448.0
+margin_top = 496.0
+margin_right = 592.0
+margin_bottom = 592.0
+aspectName = "copper"
 
-[node name="Button" type="Button" parent="Panel/Container/Copper"]
-margin_left = 31.0672
-margin_top = 72.7717
-margin_right = 111.067
-margin_bottom = 92.7717
-text = "Copper"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Alchemist" parent="Panel/Container" instance=ExtResource( 7 )]
+margin_left = 448.0
+margin_top = 256.0
+margin_right = 592.0
+margin_bottom = 352.0
+aspectName = "alchemist"
 
-[node name="Image" type="Sprite" parent="Panel/Container/Copper"]
-position = Vector2( 67.8949, 36.0511 )
-scale = Vector2( 0.66, 0.66 )
-texture = ExtResource( 11 )
+[node name="Gold" parent="Panel/Container" instance=ExtResource( 7 )]
+margin_left = 320.0
+margin_top = 48.0
+margin_right = 464.0
+margin_bottom = 144.0
+aspectName = "gold"
 
-[node name="Mercury" type="Panel" parent="Panel/Container"]
-margin_left = 558.799
-margin_top = 276.617
-margin_right = 698.799
-margin_bottom = 376.617
-custom_styles/panel = SubResource( 3 )
-
-[node name="Button" type="Button" parent="Panel/Container/Mercury"]
-margin_left = 29.569
-margin_top = 72.0225
-margin_right = 109.569
-margin_bottom = 92.0225
-text = "Mercury"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Image" type="Sprite" parent="Panel/Container/Mercury"]
-position = Vector2( 68.644, 36.0511 )
-texture = ExtResource( 5 )
-
-[node name="Gold" type="Panel" parent="Panel/Container"]
-margin_left = 240.09
-margin_top = -100.672
-margin_right = 380.09
-margin_bottom = -0.671547
-custom_styles/panel = SubResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button" type="Button" parent="Panel/Container/Gold"]
-margin_left = 30.5565
-margin_top = 75.4107
-margin_right = 110.557
-margin_bottom = 95.4107
-text = "Gold"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Image" type="Sprite" parent="Panel/Container/Gold"]
-position = Vector2( 71.283, 39.9501 )
-texture = ExtResource( 9 )
-
-[node name="Iron" type="Panel" parent="Panel/Container"]
-margin_left = 457.018
-margin_top = -100.672
-margin_right = 597.018
-margin_bottom = -0.671547
-custom_styles/panel = SubResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button" type="Button" parent="Panel/Container/Iron"]
-margin_left = 30.5565
-margin_top = 75.4107
-margin_right = 110.557
-margin_bottom = 95.4107
-text = "Iron"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Image" type="Sprite" parent="Panel/Container/Iron"]
-position = Vector2( 70.5338, 39.9501 )
-texture = ExtResource( 4 )
-
-[node name="Tin" type="Panel" parent="Panel/Container"]
-margin_left = 600.891
-margin_top = 70.381
-margin_right = 740.891
-margin_bottom = 170.381
-custom_styles/panel = SubResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button" type="Button" parent="Panel/Container/Tin"]
-margin_left = 30.5565
-margin_top = 75.4107
-margin_right = 110.557
-margin_bottom = 95.4107
-text = "Tin"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Image" type="Sprite" parent="Panel/Container/Tin"]
-position = Vector2( 71.283, 39.9501 )
-texture = ExtResource( 10 )
-
-[node name="Alchemist" type="Panel" parent="Panel/Container"]
-margin_left = 342.53
-margin_top = 118.49
-margin_right = 482.53
-margin_bottom = 218.49
-custom_styles/panel = SubResource( 7 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Button" type="Button" parent="Panel/Container/Alchemist"]
-margin_left = 30.5565
-margin_top = 71.8471
-margin_right = 110.557
-margin_bottom = 91.8471
-rect_rotation = 0.151834
-text = "Alchemist"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Image" type="Sprite" parent="Panel/Container/Alchemist"]
-position = Vector2( 71.283, 39.0591 )
-scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 6 )
+[node name="Iron" parent="Panel/Container" instance=ExtResource( 7 )]
+margin_left = 560.0
+margin_top = 48.0
+margin_right = 704.0
+margin_bottom = 144.0
+aspectName = "iron"
 [connection signal="pressed" from="Panel/Control/ShopButton" to="." method="_on_ShopButton_pressed"]
-[connection signal="pressed" from="Panel/Container/Lead/Button" to="." method="_on_Button_pressed" binds= [ "lead" ]]
-[connection signal="pressed" from="Panel/Container/Copper/Button" to="." method="_on_Button_pressed" binds= [ "copper" ]]
-[connection signal="pressed" from="Panel/Container/Mercury/Button" to="." method="_on_Button_pressed" binds= [ "mercury" ]]
-[connection signal="pressed" from="Panel/Container/Gold/Button" to="." method="_on_Button_pressed" binds= [ "gold" ]]
-[connection signal="pressed" from="Panel/Container/Iron/Button" to="." method="_on_Button_pressed" binds= [ "iron" ]]
-[connection signal="pressed" from="Panel/Container/Tin/Button" to="." method="_on_Button_pressed" binds= [ "tin" ]]
-[connection signal="pressed" from="Panel/Container/Alchemist/Button" to="." method="_on_Button_pressed" binds= [ "alchemist" ]]

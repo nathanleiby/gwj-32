@@ -6,21 +6,19 @@ func pre_start(params):
 
 	# Indicate metals that are complete
 	if Player.aspects['silver']:
-		$Panel/Container/Silver/Button.hide()
+		$Panel/Container/Silver.hideButton()
 	if Player.aspects['copper']:
-		$Panel/Container/Copper/Button.hide()
+		$Panel/Container/Copper.hideButton()
 	if Player.aspects['tin']:
-		$Panel/Container/Tin/Button.hide()
+		$Panel/Container/Tin.hideButton()
 	if Player.aspects['lead']:
-		$Panel/Container/Lead/Button.hide()
+		$Panel/Container/Lead.hideButton()
 	if Player.aspects['iron']:
-		$Panel/Container/Iron/Button.hide()
+		$Panel/Container/Iron.hideButton()
 	if Player.aspects['gold']:
-		$Panel/Container/Gold/Button.hide()
+		$Panel/Container/Gold.hideButton()
 	if Player.aspects['mercury']:
-		$Panel/Container/Mercury/Button.hide()
-
-	return
+		$Panel/Container/Mercury.hideButton()
 
 
 func _on_Button_pressed(zone):

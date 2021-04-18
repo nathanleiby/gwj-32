@@ -57,7 +57,6 @@ func pre_start(params):
 	# Prepare UI
 	$Enemy/Status/Title.text = "Enemy"
 	$Player/Status/Title.text = "Player"
-	Game.zone = 'tin'  # TODO: remove
 	$Enemy/Title.text = Game.ZONE_TO_ENEMY[Game.zone]
 	$Enemy/Image.texture = load("res://assets/img/enemies/%s.svg" % Game.zone)
 	$Enemy/Explain.text = "attacks for %s damage every other turn" % opponentAttack
