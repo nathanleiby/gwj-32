@@ -108,6 +108,8 @@ func _next_tick():
 
 		# winings
 		Player.money += (Game.zones_complete * Game.LEVELS_PER_ZONE + Game.level)
+		if Player.aspects['gold']:
+			Player.money += 1
 		Game.level += 1
 
 		# game over? or econ scene
