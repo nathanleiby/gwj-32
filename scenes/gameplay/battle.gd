@@ -47,7 +47,7 @@ func pre_start(params):
 			difficulty = 50
 
 	opponentMaxHP = 10 * difficulty
-	opponentAttack = floor(difficulty * .75)
+	opponentAttack = ceil(difficulty * .75)
 
 	opponentHp = opponentMaxHP
 
