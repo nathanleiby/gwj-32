@@ -15,6 +15,7 @@ var startTime
 
 # Hit points and status
 var opponentHp
+var opponentMaxHP
 var opponentAttack
 var opponentAttackFrequency = 2
 
@@ -36,20 +37,22 @@ func pre_start(params):
 
 	# Setup game state
 	var difficulty = Game.LEVELS_PER_ZONE * Game.zones_complete + Game.level
-	opponentHp = 10 * difficulty
-	opponentAttack = difficulty
+	opponentMaxHP = 10 * difficulty
+	opponentAttack = floor(difficulty * .75)
 
 	if Game.zone == 'alchemist':
 		# final level edge case alchemist
 		if Game.level == 1:
-			opponentHp = 250
+			opponentMaxHP = 250
 			opponentAttack = 25
 		elif Game.level == 2:
-			opponentHp = 400
+			opponentMaxHP = 400
 			opponentAttack = 40
 		elif Game.level == 3:
-			opponentHp = 600
+			opponentMaxHP = 600
 			opponentAttack = 60
+
+	opponentHp = opponentMaxHP
 
 	deck = Player.deck.duplicate()
 	shuffle_deck()

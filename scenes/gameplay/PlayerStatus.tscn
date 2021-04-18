@@ -50,6 +50,7 @@ margin_top = 46.782
 margin_right = 228.509
 margin_bottom = 86.782
 custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.439216, 0.988235, 0.92549, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
