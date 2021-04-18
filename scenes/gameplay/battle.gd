@@ -117,6 +117,11 @@ func _next_tick():
 
 		# game over? or econ scene
 		if Game.level > Game.LEVELS_PER_ZONE:
+			# aspect of copper
+			if Player.aspects['copper']:
+				Player.currentHP += Game.COPPER_HEAL_BONUS
+				Player.currentHP = int(clamp(Player.currentHP, 0, Player.maxHP))
+
 			if Game.zone == 'alchemist':
 				Game.change_scene(Game.VICTORY_SCENE)
 			else:
