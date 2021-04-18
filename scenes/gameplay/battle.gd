@@ -131,20 +131,9 @@ func _next_tick():
 	########################################
 	## Update Deck, Queue, and Discard
 	########################################
-	if deck.size() == 0:
-		deck = discard
-		discard = []
-		shuffle_deck()
-
-	# draw a card
-	var drawnCard = deck.pop_front()
-
-	# make space in queue, if needed
-	if len(queue) == queueSize:
-		var toDiscard = queue.pop_back()
-		discard.push_front(toDiscard)
-	# add to queue
-	queue.push_front(drawnCard)
+	drawCard()
+	if Player.aspects['mercury']:
+		drawCard()
 
 	########################################
 	## Do effects  of current cards
@@ -175,6 +164,23 @@ func _next_tick():
 
 
 const X_OFFSET_QUEUECARD = 60
+
+
+func drawCard():
+	if deck.size() == 0:
+		deck = discard
+		discard = []
+		shuffle_deck()
+
+	# draw a card
+	var drawnCard = deck.pop_front()
+
+	# make space in queue, if needed
+	if len(queue) == queueSize:
+		var toDiscard = queue.pop_back()
+		discard.push_front(toDiscard)
+	# add to queue
+	queue.push_front(drawnCard)
 
 
 func updateQueue():
