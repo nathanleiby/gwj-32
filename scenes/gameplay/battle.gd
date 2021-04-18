@@ -74,6 +74,11 @@ func start():
 
 	startTime = OS.get_ticks_msec()
 
+	if Player.aspects['lead']:
+		var cardsToDraw = int(floor(float(Player.queueSize) / 2))  # e.g. player has queue size of 5, we expect lead to cause 2cards + 1 for draw
+		for _i in range(cardsToDraw):
+			drawCard()
+
 
 func _process(_delta):
 	var elapsed = OS.get_ticks_msec()
@@ -151,6 +156,10 @@ func _next_tick():
 			Player.currentHP += selfArmor
 			selfArmor = 0
 
+	refreshUI()
+
+
+func refreshUI():
 	## Update game UI
 	$Player/Status/HP.text = str(Player.currentHP) + " / " + str(Player.maxHP)
 	$Player/Status/Armor.text = str(selfArmor)
