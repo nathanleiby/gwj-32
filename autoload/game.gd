@@ -80,7 +80,7 @@ const IRON_ATTACK_BONUS = 1
 const TIN_ARMOR_BONUS = 1
 const COPPER_HEAL_BONUS = 5
 const MERCURY_DRAW_BONUS = 1
-const SILVER_DECK_SIZE_BONUS = 3
+const SILVER_ARMOR_BONUS = 10
 const GOLD_GOLD_BONUS = 1
 
 const ZONE_TO_BONUS = {
@@ -88,7 +88,7 @@ const ZONE_TO_BONUS = {
 	'copper': 'Heal %s HP at the end of each battle' % COPPER_HEAL_BONUS,
 	'iron': 'Attack cards do +%s damage' % IRON_ATTACK_BONUS,
 	'mercury': "Draw +%s card per turn" % MERCURY_DRAW_BONUS,
-	'silver': 'Max deck size +%s' % SILVER_DECK_SIZE_BONUS,
+	'silver': 'Start battle with %s armor' % SILVER_ARMOR_BONUS,
 	'lead': 'Start battle with your queue half full (rounded up)',
 	'gold': 'Gain +%s gold per enounter' % GOLD_GOLD_BONUS,
 	'alchemist': '',

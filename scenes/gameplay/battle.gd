@@ -51,6 +51,9 @@ func pre_start(params):
 
 	opponentHp = opponentMaxHP
 
+	if Player.aspects['silver']:
+		selfArmor += Game.SILVER_ARMOR_BONUS
+
 	deck = Player.deck.duplicate()
 	shuffle_deck()
 
