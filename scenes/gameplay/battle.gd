@@ -212,25 +212,33 @@ enum CardEffects {
 
 func cardEffects():
 	var out = []
+	var attackBonus = 0
+	if Player.aspects['iron']:
+		attackBonus = Game.IRON_ATTACK_BONUS
+
+	var defendBonus = 0
+	if Player.aspects['tin']:
+		defendBonus = Game.TIN_ARMOR_BONUS
+
 	for cur in queue:
 		if cur == cardsDB.Attack1:
-			out.push_back({CardEffects.Damage: 1})
+			out.push_back({CardEffects.Damage: 1 + attackBonus})
 		if cur == cardsDB.Attack2:
-			out.push_back({CardEffects.Damage: 2})
+			out.push_back({CardEffects.Damage: 2 + attackBonus})
 		if cur == cardsDB.QueueBlade:
 			var value = 0
 			for q in queue:
 				if cardsDB.DATA[q]["type"] == cardsDB.AttackType:
 					value += 1
-			out.push_back({CardEffects.Damage: value})
+			out.push_back({CardEffects.Damage: value + attackBonus})
 		if cur == cardsDB.Defend1:
-			out.push_back({CardEffects.Armor: 1})
+			out.push_back({CardEffects.Armor: 1 + defendBonus})
 		if cur == cardsDB.Defend2:
-			out.push_back({CardEffects.Armor: 2})
+			out.push_back({CardEffects.Armor: 2 + defendBonus})
 		if cur == cardsDB.QueueShield:
 			var value = 0
 			for q in queue:
 				if cardsDB.DATA[q]["type"] == cardsDB.DefendType:
 					value += 1
-			out.push_back({CardEffects.Armor: value})
+			out.push_back({CardEffects.Armor: value + defendBonus})
 	return out
