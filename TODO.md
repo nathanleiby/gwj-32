@@ -12,17 +12,26 @@
 
 ## Backlog
 
+### P1
+
 - make battle easier to understand
   - show summarized damage in big #
   - show enemy's queue, too
 - earn aspects, and apply their powers
-- add a screen after defeating each lord of metal, where you acquire their aspect and it explain the power
 - add more endgame stats like damage dealt, aspect
+
+### P2
+
+- add a lifebar
+  - https://www.youtube.com/watch?v=h5slNt__Tt8
+  - https://www.youtube.com/watch?v=PLcfekxtYlA
 - add hover effects to explain cards
 - add music and sound effects
-- (fun) make acquired aspects glow, for fun / celebrate
 - Fix non-ideal UX:  remove need for "refresh" button in econ screen
 - abstract out lots of key params into a consts / globals files
+
+### P3
+- (fun) make acquired aspects glow, for fun / celebrate
 - event bus, signals
 - think through core game state (Player properties, current level, score, etc)
 - controller input

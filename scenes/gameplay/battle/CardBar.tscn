@@ -1,0 +1,357 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/img/attack.svg" type="Texture" id=1]
+[ext_resource path="res://assets/img/icons/card-burn.svg" type="Texture" id=2]
+[ext_resource path="res://assets/img/icons/card-draw.svg" type="Texture" id=3]
+[ext_resource path="res://scenes/gameplay/battle/CardBar.gd" type="Script" id=5]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.419608, 0.419608, 0.419608, 1 )
+
+[node name="CardBar" type="Panel"]
+margin_right = 512.0
+margin_bottom = 128.0
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_left = 8.0
+margin_top = 8.0
+size_flags_horizontal = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+margin_right = 496.0
+margin_bottom = 110.0
+size_flags_horizontal = 3
+
+[node name="DrawPile" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+margin_right = 64.0
+margin_bottom = 110.0
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/DrawPile"]
+margin_right = 64.0
+margin_bottom = 14.0
+text = "7 cards"
+align = 1
+valign = 1
+
+[node name="Top" type="ColorRect" parent="MarginContainer/HBoxContainer/DrawPile"]
+margin_top = 14.0
+margin_right = 64.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 64, 16 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="Image" type="TextureRect" parent="MarginContainer/HBoxContainer/DrawPile"]
+margin_top = 30.0
+margin_right = 64.0
+margin_bottom = 94.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bottom" type="ColorRect" parent="MarginContainer/HBoxContainer/DrawPile"]
+margin_top = 94.0
+margin_right = 64.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 64, 16 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="Queue" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+margin_left = 68.0
+margin_right = 428.0
+margin_bottom = 110.0
+size_flags_horizontal = 3
+
+[node name="Card1" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Queue"]
+margin_right = 48.0
+margin_bottom = 110.0
+
+[node name="Damage" type="Label" parent="MarginContainer/HBoxContainer/Queue/Card1"]
+margin_right = 48.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0.882353, 0, 0, 1 )
+text = "12"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Armor" type="Label" parent="MarginContainer/HBoxContainer/Queue/Card1"]
+margin_top = 18.0
+margin_right = 48.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.211765, 1, 1, 1 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image" type="TextureRect" parent="MarginContainer/HBoxContainer/Queue/Card1"]
+margin_top = 36.0
+margin_right = 48.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 48, 48 )
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+
+[node name="Card2" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Queue"]
+margin_left = 52.0
+margin_right = 100.0
+margin_bottom = 110.0
+
+[node name="Damage" type="Label" parent="MarginContainer/HBoxContainer/Queue/Card2"]
+margin_right = 48.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0.882353, 0, 0, 1 )
+text = "12"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Armor" type="Label" parent="MarginContainer/HBoxContainer/Queue/Card2"]
+margin_top = 18.0
+margin_right = 48.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.211765, 1, 1, 1 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image" type="TextureRect" parent="MarginContainer/HBoxContainer/Queue/Card2"]
+margin_top = 36.0
+margin_right = 48.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 48, 48 )
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+
+[node name="Card3" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Queue"]
+margin_left = 104.0
+margin_right = 152.0
+margin_bottom = 110.0
+
+[node name="Damage" type="Label" parent="MarginContainer/HBoxContainer/Queue/Card3"]
+margin_right = 48.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0.882353, 0, 0, 1 )
+text = "12"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Armor" type="Label" parent="MarginContainer/HBoxContainer/Queue/Card3"]
+margin_top = 18.0
+margin_right = 48.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.211765, 1, 1, 1 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image" type="TextureRect" parent="MarginContainer/HBoxContainer/Queue/Card3"]
+margin_top = 36.0
+margin_right = 48.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 48, 48 )
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+
+[node name="Card4" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Queue"]
+margin_left = 156.0
+margin_right = 204.0
+margin_bottom = 110.0
+
+[node name="Damage" type="Label" parent="MarginContainer/HBoxContainer/Queue/Card4"]
+margin_right = 48.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0.882353, 0, 0, 1 )
+text = "12"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Armor" type="Label" parent="MarginContainer/HBoxContainer/Queue/Card4"]
+margin_top = 18.0
+margin_right = 48.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.211765, 1, 1, 1 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image" type="TextureRect" parent="MarginContainer/HBoxContainer/Queue/Card4"]
+margin_top = 36.0
+margin_right = 48.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 48, 48 )
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+
+[node name="Card5" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Queue"]
+margin_left = 208.0
+margin_right = 256.0
+margin_bottom = 110.0
+
+[node name="Damage" type="Label" parent="MarginContainer/HBoxContainer/Queue/Card5"]
+margin_right = 48.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0.882353, 0, 0, 1 )
+text = "12"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Armor" type="Label" parent="MarginContainer/HBoxContainer/Queue/Card5"]
+margin_top = 18.0
+margin_right = 48.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.211765, 1, 1, 1 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image" type="TextureRect" parent="MarginContainer/HBoxContainer/Queue/Card5"]
+margin_top = 36.0
+margin_right = 48.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 48, 48 )
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+
+[node name="Card6" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Queue"]
+margin_left = 260.0
+margin_right = 308.0
+margin_bottom = 110.0
+
+[node name="Damage" type="Label" parent="MarginContainer/HBoxContainer/Queue/Card6"]
+margin_right = 48.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0.882353, 0, 0, 1 )
+text = "12"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Armor" type="Label" parent="MarginContainer/HBoxContainer/Queue/Card6"]
+margin_top = 18.0
+margin_right = 48.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.211765, 1, 1, 1 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image" type="TextureRect" parent="MarginContainer/HBoxContainer/Queue/Card6"]
+margin_top = 36.0
+margin_right = 48.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 48, 48 )
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+
+[node name="Card7" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Queue"]
+margin_left = 312.0
+margin_right = 360.0
+margin_bottom = 110.0
+
+[node name="Damage" type="Label" parent="MarginContainer/HBoxContainer/Queue/Card7"]
+margin_right = 48.0
+margin_bottom = 14.0
+custom_colors/font_color = Color( 0.882353, 0, 0, 1 )
+text = "12"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Armor" type="Label" parent="MarginContainer/HBoxContainer/Queue/Card7"]
+margin_top = 18.0
+margin_right = 48.0
+margin_bottom = 32.0
+custom_colors/font_color = Color( 0.211765, 1, 1, 1 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image" type="TextureRect" parent="MarginContainer/HBoxContainer/Queue/Card7"]
+margin_top = 36.0
+margin_right = 48.0
+margin_bottom = 84.0
+rect_min_size = Vector2( 48, 48 )
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+
+[node name="DiscardPile" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+margin_left = 432.0
+margin_right = 496.0
+margin_bottom = 110.0
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/DiscardPile"]
+margin_right = 64.0
+margin_bottom = 14.0
+text = "7 cards"
+align = 1
+
+[node name="Top" type="ColorRect" parent="MarginContainer/HBoxContainer/DiscardPile"]
+margin_top = 14.0
+margin_right = 64.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 64, 16 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="Image" type="TextureRect" parent="MarginContainer/HBoxContainer/DiscardPile"]
+margin_top = 30.0
+margin_right = 64.0
+margin_bottom = 94.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bottom" type="ColorRect" parent="MarginContainer/HBoxContainer/DiscardPile"]
+margin_top = 94.0
+margin_right = 64.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 64, 16 )
+color = Color( 0, 0, 0, 1 )

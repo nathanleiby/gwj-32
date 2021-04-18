@@ -38,7 +38,7 @@ __meta__ = {
 }
 
 [node name="ArmorIcon" type="Sprite" parent="."]
-modulate = Color( 0.3, 0.3, 0.3, 1 )
+modulate = Color( 0.439216, 0.988235, 0.92549, 1 )
 position = Vector2( 0, 64.6 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )

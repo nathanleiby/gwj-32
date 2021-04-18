@@ -12,7 +12,8 @@
   - https://game-icons.net/1x1/delapouite/heart-shield.html
 - by Faithtoken under CC BY 3.0
   - https://game-icons.net/1x1/faithtoken/card-draw.html
-
+- by Lorc under CC BY 3.0
+  - https://game-icons.net/1x1/lorc/padlock.html
 ## Sound
 
 TODO... see SOUND.md

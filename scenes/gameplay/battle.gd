@@ -55,15 +55,16 @@ func pre_start(params):
 	shuffle_deck()
 
 	# Prepare UI
-	$PlayerBoard/Deck.text = ""
-	$PlayerBoard/Queue.text = ""
-	$PlayerBoard/Discard.text = ""
-	$PlayerStatus/Title.text = "Player"
-	$EnemyStatus/Title.text = "Enemy"  # TODO: Specific enemy
+	$Enemy/Status/Title.text = "Enemy"
+	$Player/Status/Title.text = "Player"
+	Game.zone = 'tin'  # TODO: remove
 	$Enemy/Title.text = Game.ZONE_TO_ENEMY[Game.zone]
 	$Enemy/Image.texture = load("res://assets/img/enemies/%s.svg" % Game.zone)
 	$Enemy/Explain.text = "attacks for %s damage every other turn" % opponentAttack
 	$Enemy/ZoneLevel.text = "Zone %s, Level %s" % [Game.zones_complete + 1, Game.level]
+
+	$Player/CardBar.setQueueSize(Player.queueSize)
+	$Enemy/CardBar.setQueueSize(1)  # TODO
 
 
 # `start()` is called when the graphic transition ends.
@@ -163,14 +164,14 @@ func _next_tick():
 			selfArmor = 0
 
 	## Update game UI
-	$PlayerStatus/HP.text = str(Player.currentHP) + " / " + str(Player.maxHP)
-	$PlayerStatus/Armor.text = str(selfArmor)
+	$Player/Status/HP.text = str(Player.currentHP) + " / " + str(Player.maxHP)
+	$Player/Status/Armor.text = str(selfArmor)
 
-	$EnemyStatus/HP.text = str(opponentHp)
-	$EnemyStatus/Armor.text = str(0)
+	$Enemy/Status/HP.text = str(opponentHp)
+	$Enemy/Status/Armor.text = str(0)
 
-	$PlayerBoard/Deck.text = "%s cards" % len(deck)
-	$PlayerBoard/Discard.text = "%s cards" % len(discard)
+	$Player/CardBar.setDeckCount(len(deck))
+	$Player/CardBar.setDiscardCount(len(discard))
 	updateQueue()
 
 
@@ -178,38 +179,15 @@ const X_OFFSET_QUEUECARD = 60
 
 
 func updateQueue():
-	## Show cards in queue
-	for c in $PlayerBoard/Queue.get_children():
-		$PlayerBoard/Queue.remove_child(c)
-
 	var effects = cardEffects()
 	for i in range(queueSize):
 		if i < len(queue):
-			var card = cardScene.instance()
-			card.set_position(Vector2((i + 1) * X_OFFSET_QUEUECARD, 50))
-			card.setCard(queue[i])
-			$PlayerBoard/Queue.add_child(card)
-
-			# Damage label
 			var damageFromCard = effects[i].get(CardEffects.Damage, 0)
-			if damageFromCard != 0:
-				var label = Label.new()
-				label.set_position(Vector2((i + 1) * X_OFFSET_QUEUECARD - 25, 0))
-				label.text = str(damageFromCard)
-				label.add_color_override("font_color", Color.red)
-				$PlayerBoard/Queue.add_child(label)
-
-			# Armor label
 			var armorFromCard = effects[i].get(CardEffects.Armor, 0)
-			if armorFromCard != 0:
-				var armorLabel = Label.new()
-				armorLabel.set_position(Vector2((i + 1) * X_OFFSET_QUEUECARD, 0))
-				armorLabel.text = str(armorFromCard)
-				armorLabel.add_color_override("font_color", Color(.3, .3, .3))
-				$PlayerBoard/Queue.add_child(armorLabel)
+			$Player/CardBar.setCard(i, queue[i], damageFromCard, armorFromCard)
 		else:
 			continue
-		# TODO: Display empty queue spaces
+		# TODO: Display empty (locked) queue spaces
 
 
 enum CardEffects {
