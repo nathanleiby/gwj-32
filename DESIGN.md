@@ -149,7 +149,7 @@ So by default each sword card activates 1x, but if you play a Q of swords they'l
   - variant.. heal 10% health whenever you shuffle the deck
 - gold: gain +1 gold per encounter
   - enemies have better than average cards, since they're rich?
-- silver: max deck size +4
+- silver: start battle with 10 armor
   - without this aspect capped at X cards (10?)
   - queue size +X?
   - enemies hard large queue and large  deck?
