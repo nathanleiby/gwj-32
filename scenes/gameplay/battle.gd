@@ -37,20 +37,17 @@ func pre_start(params):
 
 	# Setup game state
 	var difficulty = Game.LEVELS_PER_ZONE * Game.zones_complete + Game.level
-	opponentMaxHP = 10 * difficulty
-	opponentAttack = floor(difficulty * .75)
-
 	if Game.zone == 'alchemist':
 		# final level edge case alchemist
 		if Game.level == 1:
-			opponentMaxHP = 250
-			opponentAttack = 25
+			difficulty = 25
 		elif Game.level == 2:
-			opponentMaxHP = 400
-			opponentAttack = 40
+			difficulty = 35
 		elif Game.level == 3:
-			opponentMaxHP = 600
-			opponentAttack = 60
+			difficulty = 50
+
+	opponentMaxHP = 10 * difficulty
+	opponentAttack = floor(difficulty * .75)
 
 	opponentHp = opponentMaxHP
 
