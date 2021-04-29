@@ -1,8 +1,18 @@
-enum { Attack1, Attack2, Defend1, Defend2, QueueBlade, QueueShield }
+enum { Attack1, Attack2, Defend1, Defend2, QueueBlade, QueueShield, DeckBlade, DeckShield }
 
 enum { Tier1, Tier2, Tier3, Tier4, Tier5 }
 
 enum { AttackType, DefendType }
+
+# Rampage:
+# 	{
+# 		"title": "Rampage",
+# 		"description": "1 + (X/2) damage (X = number of times card has been played)",
+# 		"type": AttackType,
+# 		"cost": 3,
+# 		"rarity": Tier2,
+# 		"texture": preload("res://assets/img/attack.svg"),
+# 	},
 
 const DATA = {
 	Attack1:
@@ -23,10 +33,19 @@ const DATA = {
 		"rarity": Tier2,
 		"texture": preload("res://assets/img/attack.svg"),
 	},
+	DeckBlade:
+	{
+		"title": "Deck Blade",
+		"description": "X damage per Attack card in Deck",
+		"type": AttackType,
+		"cost": 3,
+		"rarity": Tier2,
+		"texture": preload("res://assets/img/attack.svg"),
+	},
 	QueueBlade:
 	{
 		"title": "Queue Blade",
-		"description": "X damage per attack card in queue",
+		"description": "X damage per Attack card in Queue",
 		"type": AttackType,
 		"cost": 4,
 		"rarity": Tier3,
@@ -51,12 +70,21 @@ const DATA = {
 	QueueShield:
 	{
 		"title": "Queue Shield",
-		"description": "X armor per Defend card in queue",
+		"description": "X armor per Defend card in Queue",
 		"type": DefendType,
-		"cost": 4,
+		"cost": 3,
 		"rarity": Tier3,
 		"texture": preload("res://assets/img/defend.svg"),
-	}
+	},
+	DeckShield:
+	{
+		"title": "Deck Blade",
+		"description": "X armor per Defend card in Deck",
+		"type": AttackType,
+		"cost": 5,
+		"rarity": Tier4,
+		"texture": preload("res://assets/img/defend.svg"),
+	},
 }
 
 const rarityToColor = {

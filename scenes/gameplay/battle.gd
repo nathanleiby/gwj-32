@@ -241,6 +241,12 @@ func cardEffects():
 				if cardsDB.DATA[q]["type"] == cardsDB.AttackType:
 					value += 1
 			out.push_back({CardEffects.Damage: value + attackBonus})
+		if cur == cardsDB.DeckBlade:
+			var value = 0
+			for d in Player.deck:  # all cards in deck
+				if cardsDB.DATA[d]["type"] == cardsDB.AttackType:
+					value += 1
+			out.push_back({CardEffects.Damage: value + attackBonus})
 		if cur == cardsDB.Defend1:
 			out.push_back({CardEffects.Armor: 1 + defendBonus})
 		if cur == cardsDB.Defend2:
@@ -249,6 +255,12 @@ func cardEffects():
 			var value = 0
 			for q in queue:
 				if cardsDB.DATA[q]["type"] == cardsDB.DefendType:
+					value += 1
+			out.push_back({CardEffects.Armor: value + defendBonus})
+		if cur == cardsDB.DeckShield:
+			var value = 0
+			for d in Player.deck:  # all cards in deck
+				if cardsDB.DATA[d]["type"] == cardsDB.DefendType:
 					value += 1
 			out.push_back({CardEffects.Armor: value + defendBonus})
 	return out
