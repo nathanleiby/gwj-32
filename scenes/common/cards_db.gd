@@ -33,15 +33,6 @@ const DATA = {
 		"rarity": Tier2,
 		"texture": preload("res://assets/img/attack.svg"),
 	},
-	DeckBlade:
-	{
-		"title": "Deck Blade",
-		"description": "X damage per Attack card in Deck",
-		"type": AttackType,
-		"cost": 3,
-		"rarity": Tier2,
-		"texture": preload("res://assets/img/attack.svg"),
-	},
 	QueueBlade:
 	{
 		"title": "Queue Blade",
@@ -49,6 +40,15 @@ const DATA = {
 		"type": AttackType,
 		"cost": 4,
 		"rarity": Tier3,
+		"texture": preload("res://assets/img/attack.svg"),
+	},
+	DeckBlade:
+	{
+		"title": "Deck Blade",
+		"description": "X damage per Attack card in Deck",
+		"type": AttackType,
+		"cost": 6,
+		"rarity": Tier4,
 		"texture": preload("res://assets/img/attack.svg"),
 	},
 	Defend1:
@@ -72,16 +72,16 @@ const DATA = {
 		"title": "Queue Shield",
 		"description": "X armor per Defend card in Queue",
 		"type": DefendType,
-		"cost": 3,
+		"cost": 4,
 		"rarity": Tier3,
 		"texture": preload("res://assets/img/defend.svg"),
 	},
 	DeckShield:
 	{
-		"title": "Deck Blade",
+		"title": "Deck Shield",
 		"description": "X armor per Defend card in Deck",
 		"type": AttackType,
-		"cost": 5,
+		"cost": 6,
 		"rarity": Tier4,
 		"texture": preload("res://assets/img/defend.svg"),
 	},
