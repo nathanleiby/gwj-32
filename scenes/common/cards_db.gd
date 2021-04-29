@@ -80,7 +80,7 @@ const DATA = {
 	{
 		"title": "Deck Shield",
 		"description": "X armor per Defend card in Deck",
-		"type": AttackType,
+		"type": DefendType,
 		"cost": 6,
 		"rarity": Tier4,
 		"texture": preload("res://assets/img/defend.svg"),
