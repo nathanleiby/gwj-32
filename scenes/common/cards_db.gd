@@ -1,18 +1,18 @@
-enum { Attack1, Attack2, Defend1, Defend2, QueueBlade, QueueShield, DeckBlade, DeckShield }
+enum {
+	Attack1,
+	Attack2,
+	DeckBlade,
+	DeckShield,
+	Defend1,
+	Defend2,
+	HeatingUp,
+	QueueBlade,
+	QueueShield,
+}
 
 enum { Tier1, Tier2, Tier3, Tier4, Tier5 }
 
 enum { AttackType, DefendType }
-
-# Rampage:
-# 	{
-# 		"title": "Rampage",
-# 		"description": "1 + (X/2) damage (X = number of times card has been played)",
-# 		"type": AttackType,
-# 		"cost": 3,
-# 		"rarity": Tier2,
-# 		"texture": preload("res://assets/img/attack.svg"),
-# 	},
 
 const DATA = {
 	Attack1:
@@ -36,7 +36,7 @@ const DATA = {
 	QueueBlade:
 	{
 		"title": "Queue Blade",
-		"description": "X damage per Attack card in Queue",
+		"description": "1 damage per Attack card in Queue",
 		"type": AttackType,
 		"cost": 4,
 		"rarity": Tier3,
@@ -45,11 +45,20 @@ const DATA = {
 	DeckBlade:
 	{
 		"title": "Deck Blade",
-		"description": "X damage per Attack card in Deck",
+		"description": "1 damage per Attack card in Deck",
 		"type": AttackType,
 		"cost": 6,
 		"rarity": Tier4,
 		"texture": preload("res://assets/img/attack.svg"),
+	},
+	HeatingUp:
+	{
+		"title": "Heating Up",
+		"description": "X damage (X = number of times card has been drawn)",
+		"type": AttackType,
+		"cost": 2,
+		"rarity": Tier1,
+		"texture": preload("res://assets/img/cards/fire-bowl.svg"),
 	},
 	Defend1:
 	{

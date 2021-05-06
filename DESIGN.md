@@ -194,3 +194,90 @@ i.e. it starts with 1-3 and by the end is 7-9
 
 "You can pay to re-roll the shop, lessening impact of RNG"
 
+
+## Braindump from Peter (Apr 27, 2021)
+
+```
+current
+  attack
+  defense
+
+  goal:
+    * increase queue size
+    * improve expected value of attack and shield
+    * have enough cards in deck to fill up queue - extra cards aren't valuable
+
+possible improvements:
+  theme: reward smaller queue sizes
+    idea: rampage
+      increase in damage every time it has been played
+    idea: exclusion
+      decrease in damage for every other card in queue (or other cards of particular type)
+    idea: slot amplifier
+      improve effects of card when in the X slot of queue
+  theme: more levers in deck besides attack and shield
+    idea: environment
+      change effect of cards when environment in play
+    idea: super
+      can only have 1 super inside the queue -- additional supers have no effect
+    idea: sets
+      does nothing unless the entire set is present in the queue
+    idea: expendable cards
+      single use within battle. can be allowed to be more powerful at the expense of longevity
+    idea: charged cards
+      more damage the longer it stays in the queue. needs to be triggered by another card or only triggered at the end of the queue
+    idea: status effects
+      disarm - next enemy attack whiffs
+      weaken - % less damage
+      strengthen - % more damage
+      exposed - % less shield when shield applied
+      slow - queue tick speed decreases
+      haste - queue tick speed increases
+      queue/card lock - queue/card doesn't move
+      obstruct - block queue slot
+      marked - increase +x (flat) damage on every hit
+    idea: other forms of survival
+      defense: damage reduction from every attack
+      decoy: while in queue, absorbs X attacks up to Y damage
+      healing: increase HP
+    idea: ability modifiers
+      while in queue, modifies cooldown or other effects of abilities
+    idea: deck modifiers
+      damage based on deck size
+    idea: queue placement modifiers
+      move card in front behind this card in the card
+
+  theme: more mechanics
+    idea: variable queue tick speed
+      enemies, character choices, or cards can move through the queue at different speeds
+    idea: active abilities
+      * Reserve a card. This reserved card does not automatically enter the queue, but you may instead place the card at the beginning of the queue. When it reaches the end of the queue, it goes back into your reserve instead of the discard.
+      * Instant status effect application (take your choice)
+      * Reverse your queue. Your queue now moves in reverse and you will draw from your discard instead of your deck
+      * Big damage to enemy
+      * Small, ramping damage to enemy -- increases with every use
+      * Body swap. Temporarily swap decks with enemy
+      * Tactical surprise. You may remove a card from your queue and add it to a side queue of the same size as your current queue. When this side queue is full (or after X number of queue ticks), it will replace your current queue.
+```
+
+## Apr 29 discussion
+
+top 3 experiments:
+1. active abilities;
+2. sets
+3. incentives to small queue size
+
+## May 5
+
+Idea: Charging up cards.
+
+What if all cards start as white, and during combat they get enhanced. So the goal of your deck is to cause combos that enhnace all of your cards mid-battle and super-charge them. This could lead to cool color changes and card interactions to keep battle exciting.
+
+An active power might involve *charging up* so of your cards, to help bootstrap that process.
+
+- enhancing
+- leveling
+- focusing
+- charging
+
+Alternately, you mmight be able to buy cards at various levels, or enhance a card's base level, thus requiring less charging up in combat before hitting max power.

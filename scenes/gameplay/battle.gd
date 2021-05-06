@@ -21,6 +21,7 @@ var opponentAttackFrequency = 2
 
 var deck
 var selfArmor = 0
+var selfHeatLevel = 0
 
 
 # `pre_start()` is called when a scene is totally loaded.
@@ -194,6 +195,10 @@ func drawCard():
 	# draw a card
 	var drawnCard = deck.pop_front()
 
+	# do draw side-effects
+	if drawnCard == cardsDB.HeatingUp:
+		selfHeatLevel += 1
+
 	# make space in queue, if needed
 	if len(queue) == queueSize:
 		var toDiscard = queue.pop_back()
@@ -247,6 +252,8 @@ func cardEffects():
 				if cardsDB.DATA[d]["type"] == cardsDB.AttackType:
 					value += 1
 			out.push_back({CardEffects.Damage: value + attackBonus})
+		if cur == cardsDB.HeatingUp:
+			out.push_back({CardEffects.Damage: selfHeatLevel + attackBonus})
 		if cur == cardsDB.Defend1:
 			out.push_back({CardEffects.Armor: 1 + defendBonus})
 		if cur == cardsDB.Defend2:

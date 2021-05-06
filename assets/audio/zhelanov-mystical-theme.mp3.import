@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/zhelanov-mystical-theme.mp3-909b799b5857ac2dbcde08a5dd26175f.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/zhelanov-mystical-theme.mp3"
+dest_files=[ "res://.import/zhelanov-mystical-theme.mp3-909b799b5857ac2dbcde08a5dd26175f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
