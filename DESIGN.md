@@ -222,6 +222,8 @@ possible improvements:
       can only have 1 super inside the queue -- additional supers have no effect
     idea: sets
       does nothing unless the entire set is present in the queue
+      perhaps some bonus if partial set
+      causes a superpower if full set and nothing else in the queue (if sets have variable sizes => player aims for different queue sizes to allow set's superpower)
     idea: expendable cards
       single use within battle. can be allowed to be more powerful at the expense of longevity
     idea: charged cards
@@ -258,6 +260,9 @@ possible improvements:
       * Small, ramping damage to enemy -- increases with every use
       * Body swap. Temporarily swap decks with enemy
       * Tactical surprise. You may remove a card from your queue and add it to a side queue of the same size as your current queue. When this side queue is full (or after X number of queue ticks), it will replace your current queue.
+    idea: more deck control
+      * e.g. when drawn, discard this and replace with the next Attack card in your deck
+      * e.g. when drawn, gain an exile potion (exile potion is an active ability that lets you click to exile a card until end of battle), then exile this card.
 ```
 
 ## Apr 29 discussion
@@ -269,7 +274,7 @@ top 3 experiments:
 
 ## May 5
 
-Idea: Charging up cards.
+**Idea: Charging up cards.**
 
 What if all cards start as white, and during combat they get enhanced. So the goal of your deck is to cause combos that enhnace all of your cards mid-battle and super-charge them. This could lead to cool color changes and card interactions to keep battle exciting.
 
@@ -281,3 +286,10 @@ An active power might involve *charging up* so of your cards, to help bootstrap 
 - charging
 
 Alternately, you mmight be able to buy cards at various levels, or enhance a card's base level, thus requiring less charging up in combat before hitting max power.
+
+
+**Idea: Heat Level (or Fuel)**
+
+Have a global 'heat level' (naming a la Hades, but meaning different) that shows how much heat you've accumulated
+
+Maybe this could be a mana/fuel that you must spend to cast things, as well.
