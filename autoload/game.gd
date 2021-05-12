@@ -35,6 +35,10 @@ func _force_main_scene_load():
 	# Needed when playing a scene which is not
 	# scenes/main.tscn (eg:with Play Scene with F6)
 	var played_scene = get_tree().current_scene
+	if played_scene == null:
+		# This should only occur when running unit tests via gut
+		return
+
 	var root = get_node("/root")
 	main = load("res://scenes/main/main.tscn").instance()
 	main.splash_transition_on_start = false
