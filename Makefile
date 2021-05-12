@@ -2,4 +2,4 @@
 
 # run unit tests
 gut:
-	godot --path $PWD -s addons/gut/gut_cmdln.gd -gexit -gdir=`pwd`/test/unit/
+	godot -d -s --path $(PWD) addons/gut/gut_cmdln.gd -gdir=res://tests -ginclude_subdirs -gexit
