@@ -18,7 +18,7 @@ const DATA = {
 	Attack1:
 	{
 		"title": "Attack 1",
-		"description": "1 damage",
+		"description": "Deal 1 damage",
 		"type": AttackType,
 		"cost": 1,
 		"rarity": Tier1,
@@ -27,7 +27,7 @@ const DATA = {
 	Attack2:
 	{
 		"title": "Attack 2",
-		"description": "2 damage",
+		"description": "Deal 2 damage",
 		"type": AttackType,
 		"cost": 2,
 		"rarity": Tier2,
@@ -36,7 +36,7 @@ const DATA = {
 	QueueBlade:
 	{
 		"title": "Queue Blade",
-		"description": "1 damage per Attack card in Queue",
+		"description": "Deal 1 damage per Attack card in Queue",
 		"type": AttackType,
 		"cost": 4,
 		"rarity": Tier3,
@@ -45,7 +45,7 @@ const DATA = {
 	DeckBlade:
 	{
 		"title": "Deck Blade",
-		"description": "1 damage per Attack card in Deck",
+		"description": "Deal 1 damage per Attack card in Deck",
 		"type": AttackType,
 		"cost": 6,
 		"rarity": Tier4,
@@ -54,7 +54,7 @@ const DATA = {
 	HeatingUp:
 	{
 		"title": "Heating Up",
-		"description": "X damage (X = number of times card has been drawn)",
+		"description": "Deal 1 damage per time this card has been drawn",
 		"type": AttackType,
 		"cost": 2,
 		"rarity": Tier1,
@@ -63,6 +63,7 @@ const DATA = {
 	Defend1:
 	{
 		"title": "Defend 1",
+		"description": "Add 1 armor",
 		"type": DefendType,
 		"cost": 1,
 		"rarity": Tier1,
@@ -71,6 +72,7 @@ const DATA = {
 	Defend2:
 	{
 		"title": "Defend 2",
+		"description": "Add 2 armor",
 		"type": DefendType,
 		"cost": 2,
 		"rarity": Tier2,
@@ -79,7 +81,7 @@ const DATA = {
 	QueueShield:
 	{
 		"title": "Queue Shield",
-		"description": "X armor per Defend card in Queue",
+		"description": "Add 1 armor per Defend card in Queue",
 		"type": DefendType,
 		"cost": 4,
 		"rarity": Tier3,
@@ -88,7 +90,7 @@ const DATA = {
 	DeckShield:
 	{
 		"title": "Deck Shield",
-		"description": "X armor per Defend card in Deck",
+		"description": "Add 1 armor per Defend card in Deck",
 		"type": DefendType,
 		"cost": 6,
 		"rarity": Tier4,

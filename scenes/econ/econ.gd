@@ -6,7 +6,7 @@ const cardScene = preload("res://scenes/common/card.tscn")
 const deckCardScene = preload("res://scenes/econ/DeckCard.tscn")
 
 const X_OFFSET_SHOPCARD = 250
-const X_OFFSET_DECKCARD = 120
+const X_OFFSET_DECKCARD = 128
 const Y_OFFSET_DECKCARD = 120
 const DECKCARDS_PER_ROW = 7
 
