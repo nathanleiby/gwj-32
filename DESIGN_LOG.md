@@ -1,5 +1,10 @@
 # Design Log
 
+## May 11
+
+- Game ramps up difficulty too quickly
+- Just had a really cool experience where just as I died, the music hit the last note and faded out. Perfect! Reminder of why FMOD is so boss and could be fun to add someday..
+
 ## April 16
 
 - 8pm: dying in Zone 3.. gets hard too fast

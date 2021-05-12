@@ -12,6 +12,7 @@ margin_top = 50.0
 margin_right = 986.0
 margin_bottom = 289.0
 rect_pivot_offset = Vector2( 280.395, 308.346 )
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -32,6 +33,7 @@ margin_left = 13.7043
 margin_top = 10.4841
 margin_right = 810.704
 margin_bottom = 245.484
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -65,6 +67,7 @@ margin_left = 34.9603
 margin_top = 329.0
 margin_right = 980.96
 margin_bottom = 579.0
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -85,6 +88,7 @@ margin_left = 10.2224
 margin_top = 20.8588
 margin_right = 698.222
 margin_bottom = 78.8588
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -170,6 +174,7 @@ text = "5 gold"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="Shop/BuyQueueSizeButton" to="." method="_on_BuyQueueSizeButton_pressed"]
 [connection signal="pressed" from="Shop/BuyDeckSizeButton" to="." method="_on_BuyDeckSizeButton_pressed"]
 [connection signal="pressed" from="Shop/BuyHealingButton" to="." method="_on_BuyHealingButton_pressed"]

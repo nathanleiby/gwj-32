@@ -1,4 +1,4 @@
-extends Control
+extends Node2D
 
 const cardsDB = preload("res://scenes/common/cards_db.gd")
 
@@ -10,7 +10,7 @@ onready var current = cardsDB.DATA[cardName]
 
 
 func _ready():
-	pass
+	$ExplainText.hide()
 
 
 func setCard(c):
@@ -18,6 +18,15 @@ func setCard(c):
 	print("card.setCard = ", current["title"])
 	$Icon.modulate = cardsDB.getColor(current["rarity"])
 	$Icon.texture = current["texture"]
+	var explain = current.get("description", "missing description")
+	$ExplainText.bbcode_text = "[center]%s[/center]" % explain
 
-# func setShopCard(sc):
-# 	print(sc)
+
+func _on_Area2D_mouse_entered():
+	$ExplainText.show()
+	print("entered!")
+
+
+func _on_Area2D_mouse_exited():
+	$ExplainText.hide()
+	print("exited!")
