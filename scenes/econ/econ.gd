@@ -31,9 +31,9 @@ func _ready():
 	print("econ.gd _ready()")
 
 	# 3 random cards for sale
-	forSale.push_back(randomCard())
-	forSale.push_back(randomCard())
-	forSale.push_back(randomCard())
+	for _i in range(3):
+		var card = randomCardOfTier(randomTierWeighted())
+		forSale.push_back(card)
 
 	setupShopCards()
 	setupDeck()
@@ -43,6 +43,36 @@ func _ready():
 func randomCard():
 	randomize()
 	return randi() % len(cardsDB.DATA)
+
+
+func randomTierWeighted():
+	randomize()
+	var r = randf()
+	if r < 0.5:  # 50% chance
+		return cardsDB.Tier1
+	elif r < .75:  # 25% chance
+		return cardsDB.Tier2
+	elif r < .90:  # 15% chance
+		return cardsDB.Tier3
+	elif r < .97:  # 7% chance
+		return cardsDB.Tier4
+	else:  # 3% chance
+		return cardsDB.Tier5
+
+
+func randomCardOfTier(tier):
+	randomize()
+
+	var cardsOfTier = []
+	for k in cardsDB.DATA.keys():
+		if cardsDB.DATA[k]["rarity"] == tier:
+			cardsOfTier.push_back(k)
+
+	if len(cardsOfTier) == 0:
+		# fallback in case we have no cards of a given tier during dev
+		return randomCardOfTier(tier - 1)
+
+	return cardsOfTier[randi() % len(cardsOfTier)]
 
 
 func _on_RefreshButton_pressed():
