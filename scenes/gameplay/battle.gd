@@ -18,6 +18,8 @@ var opponentHp
 var opponentMaxHP
 var opponentAttack
 var opponentAttackFrequency = 2
+var boostUsed = false
+var boostCounter = 0
 
 var deck
 var selfArmor = 0
@@ -68,6 +70,9 @@ func pre_start(params):
 
 	$Player/CardBar.setQueueSize(Player.queueSize)
 	$Enemy/CardBar.setQueueSize(1)  # TODO
+
+	$BoostStatus.text = ""
+	$Item1.disabled = false
 
 
 # `start()` is called when the graphic transition ends.
@@ -154,6 +159,8 @@ func _next_tick():
 	########################################
 	## Do effects  of current cards
 	########################################
+	# Handle player triggered effects
+	boostCounter -= 1
 
 	# Player cards
 	for effect in cardEffects():
@@ -180,6 +187,12 @@ func refreshUI():
 
 	$Player/CardBar.setDeckCount(len(deck))
 	$Player/CardBar.setDiscardCount(len(discard))
+
+	var boostText = ""
+	if boostCounter > 0:
+		boostText = "BOOST!" + "\n" + "\n" + str(boostCounter) + "..."
+	$BoostStatus.text = boostText
+
 	updateQueue()
 
 
@@ -235,6 +248,9 @@ func cardEffects():
 	if Player.aspects['tin']:
 		defendBonus = Game.TIN_ARMOR_BONUS
 
+	if boostCounter > 0:
+		attackBonus += Game.BOOST_ATTACK_BONUS
+
 	for cur in queue:
 		if cur == cardsDB.Attack1:
 			out.push_back({CardEffects.Damage: 1 + attackBonus})
@@ -271,3 +287,18 @@ func cardEffects():
 					value += 1
 			out.push_back({CardEffects.Armor: value + defendBonus})
 	return out
+
+
+func _on_Item1_pressed():
+	# mvp: damage boost
+	print("Item1 pressed")
+	if boostUsed:
+		return
+	boostUsed = true
+	boostCounter += (Game.BOOST_TICKS + 1)
+	$Item1.disabled = true
+
+
+func _on_Item2_pressed():
+	# mvp: armor boost
+	print("Item2 pressed")

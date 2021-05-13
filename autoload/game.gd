@@ -109,3 +109,6 @@ const ZONE_TO_COLOR = {
 	'tin': Color.darkorange,
 	'alchemist': Color.purple,
 }
+
+const BOOST_TICKS = 3
+const BOOST_ATTACK_BONUS = 3
